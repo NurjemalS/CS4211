@@ -1,0 +1,188 @@
+{
+ "description": "lo+(hi-lo)/2 is correct under int32",
+ "expected": {
+  "derivation": {
+   "in": {
+    "arrays": {},
+    "vars": {
+     "hi": 2147483647,
+     "lo": 1
+    }
+   },
+   "out": {
+    "arrays": {},
+    "vars": {
+     "hi": 2147483647,
+     "lo": 1,
+     "m": 1073741824
+    }
+   },
+   "prem": [
+    {
+     "in": {
+      "arrays": {},
+      "vars": {
+       "hi": 2147483647,
+       "lo": 1
+      }
+     },
+     "prem": [
+      {
+       "in": {
+        "arrays": {},
+        "vars": {
+         "hi": 2147483647,
+         "lo": 1
+        }
+       },
+       "prem": [],
+       "rule": "Var",
+       "subj": "lo",
+       "val": 1
+      },
+      {
+       "in": {
+        "arrays": {},
+        "vars": {
+         "hi": 2147483647,
+         "lo": 1
+        }
+       },
+       "prem": [
+        {
+         "in": {
+          "arrays": {},
+          "vars": {
+           "hi": 2147483647,
+           "lo": 1
+          }
+         },
+         "prem": [
+          {
+           "in": {
+            "arrays": {},
+            "vars": {
+             "hi": 2147483647,
+             "lo": 1
+            }
+           },
+           "prem": [],
+           "rule": "Var",
+           "subj": "hi",
+           "val": 2147483647
+          },
+          {
+           "in": {
+            "arrays": {},
+            "vars": {
+             "hi": 2147483647,
+             "lo": 1
+            }
+           },
+           "prem": [],
+           "rule": "Var",
+           "subj": "lo",
+           "val": 1
+          }
+         ],
+         "rule": "Sub",
+         "subj": "hi - lo",
+         "val": 2147483646
+        },
+        {
+         "in": {
+          "arrays": {},
+          "vars": {
+           "hi": 2147483647,
+           "lo": 1
+          }
+         },
+         "prem": [],
+         "rule": "Num",
+         "subj": "2",
+         "val": 2
+        }
+       ],
+       "rule": "Div",
+       "subj": "(hi - lo) / 2",
+       "val": 1073741823
+      }
+     ],
+     "rule": "Add",
+     "subj": "lo + (hi - lo) / 2",
+     "val": 1073741824
+    }
+   ],
+   "rule": "Asgn",
+   "subj": "m := lo + (hi - lo) / 2"
+  },
+  "final": {
+   "arrays": {},
+   "vars": {
+    "hi": 2147483647,
+    "lo": 1,
+    "m": 1073741824
+   }
+  },
+  "status": "ok"
+ },
+ "features": [
+  "division",
+  "int32"
+ ],
+ "graded": true,
+ "group": "bigstep",
+ "id": "e04",
+ "part": "D",
+ "request": {
+  "arith": "int32",
+  "mode": "bigstep",
+  "program": {
+   "e": {
+    "k": "aop",
+    "l": {
+     "k": "var",
+     "x": "lo"
+    },
+    "op": "+",
+    "r": {
+     "k": "aop",
+     "l": {
+      "k": "aop",
+      "l": {
+       "k": "var",
+       "x": "hi"
+      },
+      "op": "-",
+      "r": {
+       "k": "var",
+       "x": "lo"
+      }
+     },
+     "op": "/",
+     "r": {
+      "k": "num",
+      "n": 2
+     }
+    }
+   },
+   "k": "assign",
+   "x": "m"
+  },
+  "state": {
+   "arrays": {},
+   "vars": {
+    "hi": 2147483647,
+    "lo": 1
+   }
+  }
+ },
+ "rules": [
+  "Add",
+  "Asgn",
+  "Div",
+  "Num",
+  "Sub",
+  "Var"
+ ]
+}

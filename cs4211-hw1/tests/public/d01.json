@@ -1,0 +1,38 @@
+{
+ "description": "a repeated configuration proves divergence",
+ "expected": {
+  "cycle_length": 3,
+  "cycle_start": 0,
+  "status": "diverges",
+  "steps": 3
+ },
+ "features": [],
+ "graded": true,
+ "group": "classify",
+ "id": "d01",
+ "part": "C",
+ "request": {
+  "arith": "int",
+  "budget": 500,
+  "mode": "classify",
+  "program": {
+   "b": {
+    "k": "bool",
+    "v": true
+   },
+   "c": {
+    "k": "skip"
+   },
+   "k": "while"
+  },
+  "state": {
+   "arrays": {},
+   "vars": {}
+  }
+ },
+ "rules": [
+  "S-If-True",
+  "S-Seq-Done",
+  "S-While"
+ ]
+}

@@ -1,0 +1,58 @@
+{
+ "description": "the state grows, so no configuration repeats: unknown",
+ "expected": {
+  "status": "unknown",
+  "steps": 500
+ },
+ "features": [],
+ "graded": true,
+ "group": "classify",
+ "id": "d02",
+ "part": "C",
+ "request": {
+  "arith": "int",
+  "budget": 500,
+  "mode": "classify",
+  "program": {
+   "b": {
+    "k": "bool",
+    "v": true
+   },
+   "c": {
+    "e": {
+     "k": "aop",
+     "l": {
+      "k": "var",
+      "x": "i"
+     },
+     "op": "+",
+     "r": {
+      "k": "num",
+      "n": 1
+     }
+    },
+    "k": "assign",
+    "x": "i"
+   },
+   "k": "while"
+  },
+  "state": {
+   "arrays": {},
+   "vars": {
+    "i": 0
+   }
+  }
+ },
+ "rules": [
+  "A-Op",
+  "A-Op-L",
+  "A-Op:+",
+  "A-Var",
+  "S-Asgn",
+  "S-Asgn-Step",
+  "S-If-True",
+  "S-Seq",
+  "S-Seq-Done",
+  "S-While"
+ ]
+}

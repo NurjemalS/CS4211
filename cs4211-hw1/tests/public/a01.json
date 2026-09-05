@@ -1,0 +1,63 @@
+{
+ "description": "a numeral denotes itself",
+ "expected": {
+  "derivation": {
+   "in": {
+    "arrays": {},
+    "vars": {}
+   },
+   "out": {
+    "arrays": {},
+    "vars": {
+     "r": 7
+    }
+   },
+   "prem": [
+    {
+     "in": {
+      "arrays": {},
+      "vars": {}
+     },
+     "prem": [],
+     "rule": "Num",
+     "subj": "7",
+     "val": 7
+    }
+   ],
+   "rule": "Asgn",
+   "subj": "r := 7"
+  },
+  "final": {
+   "arrays": {},
+   "vars": {
+    "r": 7
+   }
+  },
+  "status": "ok"
+ },
+ "features": [],
+ "graded": true,
+ "group": "bigstep-expr",
+ "id": "a01",
+ "part": "A",
+ "request": {
+  "arith": "int",
+  "mode": "bigstep",
+  "program": {
+   "e": {
+    "k": "num",
+    "n": 7
+   },
+   "k": "assign",
+   "x": "r"
+  },
+  "state": {
+   "arrays": {},
+   "vars": {}
+  }
+ },
+ "rules": [
+  "Asgn",
+  "Num"
+ ]
+}

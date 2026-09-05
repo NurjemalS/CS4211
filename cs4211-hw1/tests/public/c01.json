@@ -1,0 +1,132 @@
+{
+ "description": "the worked example of SPEC.md section 9",
+ "expected": {
+  "configs": [
+   {
+    "c": {
+     "e": {
+      "k": "aop",
+      "l": {
+       "k": "var",
+       "x": "y"
+      },
+      "op": "+",
+      "r": {
+       "k": "num",
+       "n": 2
+      }
+     },
+     "k": "assign",
+     "x": "x"
+    },
+    "s": {
+     "arrays": {},
+     "vars": {
+      "y": 5
+     }
+    }
+   },
+   {
+    "c": {
+     "e": {
+      "k": "aop",
+      "l": {
+       "k": "num",
+       "n": 5
+      },
+      "op": "+",
+      "r": {
+       "k": "num",
+       "n": 2
+      }
+     },
+     "k": "assign",
+     "x": "x"
+    },
+    "s": {
+     "arrays": {},
+     "vars": {
+      "y": 5
+     }
+    }
+   },
+   {
+    "c": {
+     "e": {
+      "k": "num",
+      "n": 7
+     },
+     "k": "assign",
+     "x": "x"
+    },
+    "s": {
+     "arrays": {},
+     "vars": {
+      "y": 5
+     }
+    }
+   },
+   {
+    "c": {
+     "k": "skip"
+    },
+    "s": {
+     "arrays": {},
+     "vars": {
+      "x": 7,
+      "y": 5
+     }
+    }
+   }
+  ],
+  "final": {
+   "arrays": {},
+   "vars": {
+    "x": 7,
+    "y": 5
+   }
+  },
+  "status": "terminated",
+  "steps": 3
+ },
+ "features": [],
+ "graded": true,
+ "group": "run",
+ "id": "c01",
+ "part": "B",
+ "request": {
+  "arith": "int",
+  "budget": 50,
+  "mode": "run",
+  "program": {
+   "e": {
+    "k": "aop",
+    "l": {
+     "k": "var",
+     "x": "y"
+    },
+    "op": "+",
+    "r": {
+     "k": "num",
+     "n": 2
+    }
+   },
+   "k": "assign",
+   "x": "x"
+  },
+  "state": {
+   "arrays": {},
+   "vars": {
+    "y": 5
+   }
+  }
+ },
+ "rules": [
+  "A-Op",
+  "A-Op-L",
+  "A-Op:+",
+  "A-Var",
+  "S-Asgn",
+  "S-Asgn-Step"
+ ]
+}

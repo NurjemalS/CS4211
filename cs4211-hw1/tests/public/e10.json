@@ -1,0 +1,41 @@
+{
+ "description": "and big-step agrees on that error priority",
+ "expected": {
+  "reason": "index 5 out of bounds for a",
+  "status": "stuck"
+ },
+ "features": [
+  "arrays"
+ ],
+ "graded": true,
+ "group": "bigstep",
+ "id": "e10",
+ "part": "D",
+ "request": {
+  "arith": "int",
+  "mode": "bigstep",
+  "program": {
+   "a": "a",
+   "e": {
+    "k": "num",
+    "n": 1
+   },
+   "i": {
+    "k": "num",
+    "n": 5
+   },
+   "k": "aset"
+  },
+  "state": {
+   "arrays": {
+    "a": [
+     1,
+     2,
+     3
+    ]
+   },
+   "vars": {}
+  }
+ },
+ "rules": []
+}

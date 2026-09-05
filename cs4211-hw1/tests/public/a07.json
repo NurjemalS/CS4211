@@ -1,0 +1,50 @@
+{
+ "description": "[Skip]",
+ "expected": {
+  "derivation": {
+   "in": {
+    "arrays": {},
+    "vars": {
+     "x": 3
+    }
+   },
+   "out": {
+    "arrays": {},
+    "vars": {
+     "x": 3
+    }
+   },
+   "prem": [],
+   "rule": "Skip",
+   "subj": "skip"
+  },
+  "final": {
+   "arrays": {},
+   "vars": {
+    "x": 3
+   }
+  },
+  "status": "ok"
+ },
+ "features": [],
+ "graded": true,
+ "group": "bigstep-com",
+ "id": "a07",
+ "part": "A",
+ "request": {
+  "arith": "int",
+  "mode": "bigstep",
+  "program": {
+   "k": "skip"
+  },
+  "state": {
+   "arrays": {},
+   "vars": {
+    "x": 3
+   }
+  }
+ },
+ "rules": [
+  "Skip"
+ ]
+}

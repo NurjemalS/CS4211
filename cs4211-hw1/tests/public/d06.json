@@ -1,0 +1,119 @@
+{
+ "description": "terminates in 66 steps",
+ "expected": {
+  "final": {
+   "arrays": {},
+   "vars": {
+    "x": 6,
+    "y": 6
+   }
+  },
+  "status": "terminated",
+  "steps": 66
+ },
+ "features": [],
+ "graded": true,
+ "group": "classify",
+ "id": "d06",
+ "part": "C",
+ "request": {
+  "arith": "int",
+  "budget": 500,
+  "mode": "classify",
+  "program": {
+   "b": {
+    "e": {
+     "k": "cmp",
+     "l": {
+      "k": "var",
+      "x": "x"
+     },
+     "op": "=",
+     "r": {
+      "k": "var",
+      "x": "y"
+     }
+    },
+    "k": "not"
+   },
+   "c": {
+    "b": {
+     "k": "cmp",
+     "l": {
+      "k": "var",
+      "x": "y"
+     },
+     "op": "<=",
+     "r": {
+      "k": "var",
+      "x": "x"
+     }
+    },
+    "f": {
+     "e": {
+      "k": "aop",
+      "l": {
+       "k": "var",
+       "x": "y"
+      },
+      "op": "-",
+      "r": {
+       "k": "var",
+       "x": "x"
+      }
+     },
+     "k": "assign",
+     "x": "y"
+    },
+    "k": "if",
+    "t": {
+     "e": {
+      "k": "aop",
+      "l": {
+       "k": "var",
+       "x": "x"
+      },
+      "op": "-",
+      "r": {
+       "k": "var",
+       "x": "y"
+      }
+     },
+     "k": "assign",
+     "x": "x"
+    }
+   },
+   "k": "while"
+  },
+  "state": {
+   "arrays": {},
+   "vars": {
+    "x": 48,
+    "y": 18
+   }
+  }
+ },
+ "rules": [
+  "A-Op",
+  "A-Op-L",
+  "A-Op-R",
+  "A-Op:-",
+  "A-Var",
+  "B-Cmp",
+  "B-Cmp-L",
+  "B-Cmp-R",
+  "B-Cmp:<=",
+  "B-Cmp:=",
+  "B-Not-F",
+  "B-Not-Step",
+  "B-Not-T",
+  "S-Asgn",
+  "S-Asgn-Step",
+  "S-If-False",
+  "S-If-Step",
+  "S-If-True",
+  "S-Seq",
+  "S-Seq-Done",
+  "S-While"
+ ]
+}

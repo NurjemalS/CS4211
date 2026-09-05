@@ -1,0 +1,64 @@
+{
+ "description": "[S-Seq] carries the inner update up",
+ "expected": {
+  "next": {
+   "c": {
+    "k": "seq",
+    "l": {
+     "k": "skip"
+    },
+    "r": {
+     "e": {
+      "k": "num",
+      "n": 2
+     },
+     "k": "assign",
+     "x": "y"
+    }
+   },
+   "s": {
+    "arrays": {},
+    "vars": {
+     "x": 1
+    }
+   }
+  },
+  "status": "ok"
+ },
+ "features": [],
+ "graded": true,
+ "group": "step",
+ "id": "b06",
+ "part": "B",
+ "request": {
+  "arith": "int",
+  "mode": "step",
+  "program": {
+   "k": "seq",
+   "l": {
+    "e": {
+     "k": "num",
+     "n": 1
+    },
+    "k": "assign",
+    "x": "x"
+   },
+   "r": {
+    "e": {
+     "k": "num",
+     "n": 2
+    },
+    "k": "assign",
+    "x": "y"
+   }
+  },
+  "state": {
+   "arrays": {},
+   "vars": {}
+  }
+ },
+ "rules": [
+  "S-Asgn",
+  "S-Seq"
+ ]
+}

@@ -1,0 +1,161 @@
+{
+ "description": "[If-False]",
+ "expected": {
+  "derivation": {
+   "in": {
+    "arrays": {},
+    "vars": {
+     "x": 7,
+     "y": 2
+    }
+   },
+   "out": {
+    "arrays": {},
+    "vars": {
+     "m": 7,
+     "x": 7,
+     "y": 2
+    }
+   },
+   "prem": [
+    {
+     "in": {
+      "arrays": {},
+      "vars": {
+       "x": 7,
+       "y": 2
+      }
+     },
+     "prem": [
+      {
+       "in": {
+        "arrays": {},
+        "vars": {
+         "x": 7,
+         "y": 2
+        }
+       },
+       "prem": [],
+       "rule": "Var",
+       "subj": "x",
+       "val": 7
+      },
+      {
+       "in": {
+        "arrays": {},
+        "vars": {
+         "x": 7,
+         "y": 2
+        }
+       },
+       "prem": [],
+       "rule": "Var",
+       "subj": "y",
+       "val": 2
+      }
+     ],
+     "rule": "Leq",
+     "subj": "x <= y",
+     "val": false
+    },
+    {
+     "in": {
+      "arrays": {},
+      "vars": {
+       "x": 7,
+       "y": 2
+      }
+     },
+     "out": {
+      "arrays": {},
+      "vars": {
+       "m": 7,
+       "x": 7,
+       "y": 2
+      }
+     },
+     "prem": [
+      {
+       "in": {
+        "arrays": {},
+        "vars": {
+         "x": 7,
+         "y": 2
+        }
+       },
+       "prem": [],
+       "rule": "Var",
+       "subj": "x",
+       "val": 7
+      }
+     ],
+     "rule": "Asgn",
+     "subj": "m := x"
+    }
+   ],
+   "rule": "If-False"
+  },
+  "final": {
+   "arrays": {},
+   "vars": {
+    "m": 7,
+    "x": 7,
+    "y": 2
+   }
+  },
+  "status": "ok"
+ },
+ "features": [],
+ "graded": true,
+ "group": "bigstep-com",
+ "id": "a09",
+ "part": "A",
+ "request": {
+  "arith": "int",
+  "mode": "bigstep",
+  "program": {
+   "b": {
+    "k": "cmp",
+    "l": {
+     "k": "var",
+     "x": "x"
+    },
+    "op": "<=",
+    "r": {
+     "k": "var",
+     "x": "y"
+    }
+   },
+   "f": {
+    "e": {
+     "k": "var",
+     "x": "x"
+    },
+    "k": "assign",
+    "x": "m"
+   },
+   "k": "if",
+   "t": {
+    "e": {
+     "k": "var",
+     "x": "y"
+    },
+    "k": "assign",
+    "x": "m"
+   }
+  },
+  "state": {
+   "arrays": {},
+   "vars": {
+    "x": 7,
+    "y": 2
+   }
+  }
+ },
+ "rules": [
+  "Asgn",
+  "If-False",
+  "Leq",
+  "Var"
+ ]
+}

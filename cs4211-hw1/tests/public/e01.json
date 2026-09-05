@@ -1,0 +1,95 @@
+{
+ "description": "division truncates toward zero",
+ "expected": {
+  "derivation": {
+   "in": {
+    "arrays": {},
+    "vars": {}
+   },
+   "out": {
+    "arrays": {},
+    "vars": {
+     "q": 3
+    }
+   },
+   "prem": [
+    {
+     "in": {
+      "arrays": {},
+      "vars": {}
+     },
+     "prem": [
+      {
+       "in": {
+        "arrays": {},
+        "vars": {}
+       },
+       "prem": [],
+       "rule": "Num",
+       "subj": "7",
+       "val": 7
+      },
+      {
+       "in": {
+        "arrays": {},
+        "vars": {}
+       },
+       "prem": [],
+       "rule": "Num",
+       "subj": "2",
+       "val": 2
+      }
+     ],
+     "rule": "Div",
+     "subj": "7 / 2",
+     "val": 3
+    }
+   ],
+   "rule": "Asgn",
+   "subj": "q := 7 / 2"
+  },
+  "final": {
+   "arrays": {},
+   "vars": {
+    "q": 3
+   }
+  },
+  "status": "ok"
+ },
+ "features": [
+  "division"
+ ],
+ "graded": true,
+ "group": "bigstep",
+ "id": "e01",
+ "part": "D",
+ "request": {
+  "arith": "int",
+  "mode": "bigstep",
+  "program": {
+   "e": {
+    "k": "aop",
+    "l": {
+     "k": "num",
+     "n": 7
+    },
+    "op": "/",
+    "r": {
+     "k": "num",
+     "n": 2
+    }
+   },
+   "k": "assign",
+   "x": "q"
+  },
+  "state": {
+   "arrays": {},
+   "vars": {}
+  }
+ },
+ "rules": [
+  "Asgn",
+  "Div",
+  "Num"
+ ]
+}

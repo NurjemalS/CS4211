@@ -1,0 +1,41 @@
+{
+ "description": "[S-Asgn] writes the store",
+ "expected": {
+  "next": {
+   "c": {
+    "k": "skip"
+   },
+   "s": {
+    "arrays": {},
+    "vars": {
+     "x": 7
+    }
+   }
+  },
+  "status": "ok"
+ },
+ "features": [],
+ "graded": true,
+ "group": "step",
+ "id": "b04",
+ "part": "B",
+ "request": {
+  "arith": "int",
+  "mode": "step",
+  "program": {
+   "e": {
+    "k": "num",
+    "n": 7
+   },
+   "k": "assign",
+   "x": "x"
+  },
+  "state": {
+   "arrays": {},
+   "vars": {}
+  }
+ },
+ "rules": [
+  "S-Asgn"
+ ]
+}

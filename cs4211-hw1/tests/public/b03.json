@@ -1,0 +1,83 @@
+{
+ "description": "[A-Op-R] fires only once the left operand is a numeral",
+ "expected": {
+  "next": {
+   "c": {
+    "e": {
+     "k": "aop",
+     "l": {
+      "k": "num",
+      "n": 5
+     },
+     "op": "+",
+     "r": {
+      "k": "aop",
+      "l": {
+       "k": "num",
+       "n": 3
+      },
+      "op": "*",
+      "r": {
+       "k": "num",
+       "n": 2
+      }
+     }
+    },
+    "k": "assign",
+    "x": "x"
+   },
+   "s": {
+    "arrays": {},
+    "vars": {
+     "y": 3
+    }
+   }
+  },
+  "status": "ok"
+ },
+ "features": [],
+ "graded": true,
+ "group": "step",
+ "id": "b03",
+ "part": "B",
+ "request": {
+  "arith": "int",
+  "mode": "step",
+  "program": {
+   "e": {
+    "k": "aop",
+    "l": {
+     "k": "num",
+     "n": 5
+    },
+    "op": "+",
+    "r": {
+     "k": "aop",
+     "l": {
+      "k": "var",
+      "x": "y"
+     },
+     "op": "*",
+     "r": {
+      "k": "num",
+      "n": 2
+     }
+    }
+   },
+   "k": "assign",
+   "x": "x"
+  },
+  "state": {
+   "arrays": {},
+   "vars": {
+    "y": 3
+   }
+  }
+ },
+ "rules": [
+  "A-Op-L",
+  "A-Op-R",
+  "A-Var",
+  "S-Asgn-Step"
+ ]
+}

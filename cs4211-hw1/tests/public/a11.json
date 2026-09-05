@@ -1,0 +1,479 @@
+{
+ "description": "[While-True] three times, then [While-False]",
+ "expected": {
+  "derivation": {
+   "in": {
+    "arrays": {},
+    "vars": {
+     "x": 3,
+     "y": 42
+    }
+   },
+   "out": {
+    "arrays": {},
+    "vars": {
+     "y": 42
+    }
+   },
+   "prem": [
+    {
+     "in": {
+      "arrays": {},
+      "vars": {
+       "x": 3,
+       "y": 42
+      }
+     },
+     "prem": [
+      {
+       "in": {
+        "arrays": {},
+        "vars": {
+         "x": 3,
+         "y": 42
+        }
+       },
+       "prem": [],
+       "rule": "Num",
+       "subj": "1",
+       "val": 1
+      },
+      {
+       "in": {
+        "arrays": {},
+        "vars": {
+         "x": 3,
+         "y": 42
+        }
+       },
+       "prem": [],
+       "rule": "Var",
+       "subj": "x",
+       "val": 3
+      }
+     ],
+     "rule": "Leq",
+     "subj": "1 <= x",
+     "val": true
+    },
+    {
+     "in": {
+      "arrays": {},
+      "vars": {
+       "x": 3,
+       "y": 42
+      }
+     },
+     "out": {
+      "arrays": {},
+      "vars": {
+       "x": 2,
+       "y": 42
+      }
+     },
+     "prem": [
+      {
+       "in": {
+        "arrays": {},
+        "vars": {
+         "x": 3,
+         "y": 42
+        }
+       },
+       "prem": [
+        {
+         "in": {
+          "arrays": {},
+          "vars": {
+           "x": 3,
+           "y": 42
+          }
+         },
+         "prem": [],
+         "rule": "Var",
+         "subj": "x",
+         "val": 3
+        },
+        {
+         "in": {
+          "arrays": {},
+          "vars": {
+           "x": 3,
+           "y": 42
+          }
+         },
+         "prem": [],
+         "rule": "Num",
+         "subj": "1",
+         "val": 1
+        }
+       ],
+       "rule": "Sub",
+       "subj": "x - 1",
+       "val": 2
+      }
+     ],
+     "rule": "Asgn",
+     "subj": "x := x - 1"
+    },
+    {
+     "in": {
+      "arrays": {},
+      "vars": {
+       "x": 2,
+       "y": 42
+      }
+     },
+     "out": {
+      "arrays": {},
+      "vars": {
+       "y": 42
+      }
+     },
+     "prem": [
+      {
+       "in": {
+        "arrays": {},
+        "vars": {
+         "x": 2,
+         "y": 42
+        }
+       },
+       "prem": [
+        {
+         "in": {
+          "arrays": {},
+          "vars": {
+           "x": 2,
+           "y": 42
+          }
+         },
+         "prem": [],
+         "rule": "Num",
+         "subj": "1",
+         "val": 1
+        },
+        {
+         "in": {
+          "arrays": {},
+          "vars": {
+           "x": 2,
+           "y": 42
+          }
+         },
+         "prem": [],
+         "rule": "Var",
+         "subj": "x",
+         "val": 2
+        }
+       ],
+       "rule": "Leq",
+       "subj": "1 <= x",
+       "val": true
+      },
+      {
+       "in": {
+        "arrays": {},
+        "vars": {
+         "x": 2,
+         "y": 42
+        }
+       },
+       "out": {
+        "arrays": {},
+        "vars": {
+         "x": 1,
+         "y": 42
+        }
+       },
+       "prem": [
+        {
+         "in": {
+          "arrays": {},
+          "vars": {
+           "x": 2,
+           "y": 42
+          }
+         },
+         "prem": [
+          {
+           "in": {
+            "arrays": {},
+            "vars": {
+             "x": 2,
+             "y": 42
+            }
+           },
+           "prem": [],
+           "rule": "Var",
+           "subj": "x",
+           "val": 2
+          },
+          {
+           "in": {
+            "arrays": {},
+            "vars": {
+             "x": 2,
+             "y": 42
+            }
+           },
+           "prem": [],
+           "rule": "Num",
+           "subj": "1",
+           "val": 1
+          }
+         ],
+         "rule": "Sub",
+         "subj": "x - 1",
+         "val": 1
+        }
+       ],
+       "rule": "Asgn",
+       "subj": "x := x - 1"
+      },
+      {
+       "in": {
+        "arrays": {},
+        "vars": {
+         "x": 1,
+         "y": 42
+        }
+       },
+       "out": {
+        "arrays": {},
+        "vars": {
+         "y": 42
+        }
+       },
+       "prem": [
+        {
+         "in": {
+          "arrays": {},
+          "vars": {
+           "x": 1,
+           "y": 42
+          }
+         },
+         "prem": [
+          {
+           "in": {
+            "arrays": {},
+            "vars": {
+             "x": 1,
+             "y": 42
+            }
+           },
+           "prem": [],
+           "rule": "Num",
+           "subj": "1",
+           "val": 1
+          },
+          {
+           "in": {
+            "arrays": {},
+            "vars": {
+             "x": 1,
+             "y": 42
+            }
+           },
+           "prem": [],
+           "rule": "Var",
+           "subj": "x",
+           "val": 1
+          }
+         ],
+         "rule": "Leq",
+         "subj": "1 <= x",
+         "val": true
+        },
+        {
+         "in": {
+          "arrays": {},
+          "vars": {
+           "x": 1,
+           "y": 42
+          }
+         },
+         "out": {
+          "arrays": {},
+          "vars": {
+           "y": 42
+          }
+         },
+         "prem": [
+          {
+           "in": {
+            "arrays": {},
+            "vars": {
+             "x": 1,
+             "y": 42
+            }
+           },
+           "prem": [
+            {
+             "in": {
+              "arrays": {},
+              "vars": {
+               "x": 1,
+               "y": 42
+              }
+             },
+             "prem": [],
+             "rule": "Var",
+             "subj": "x",
+             "val": 1
+            },
+            {
+             "in": {
+              "arrays": {},
+              "vars": {
+               "x": 1,
+               "y": 42
+              }
+             },
+             "prem": [],
+             "rule": "Num",
+             "subj": "1",
+             "val": 1
+            }
+           ],
+           "rule": "Sub",
+           "subj": "x - 1",
+           "val": 0
+          }
+         ],
+         "rule": "Asgn",
+         "subj": "x := x - 1"
+        },
+        {
+         "in": {
+          "arrays": {},
+          "vars": {
+           "y": 42
+          }
+         },
+         "out": {
+          "arrays": {},
+          "vars": {
+           "y": 42
+          }
+         },
+         "prem": [
+          {
+           "in": {
+            "arrays": {},
+            "vars": {
+             "y": 42
+            }
+           },
+           "prem": [
+            {
+             "in": {
+              "arrays": {},
+              "vars": {
+               "y": 42
+              }
+             },
+             "prem": [],
+             "rule": "Num",
+             "subj": "1",
+             "val": 1
+            },
+            {
+             "in": {
+              "arrays": {},
+              "vars": {
+               "y": 42
+              }
+             },
+             "prem": [],
+             "rule": "Var",
+             "subj": "x",
+             "val": 0
+            }
+           ],
+           "rule": "Leq",
+           "subj": "1 <= x",
+           "val": false
+          }
+         ],
+         "rule": "While-False",
+         "subj": "while 1 <= x do x := x - 1"
+        }
+       ],
+       "rule": "While-True",
+       "subj": "while 1 <= x do x := x - 1"
+      }
+     ],
+     "rule": "While-True",
+     "subj": "while 1 <= x do x := x - 1"
+    }
+   ],
+   "rule": "While-True",
+   "subj": "while 1 <= x do x := x - 1"
+  },
+  "final": {
+   "arrays": {},
+   "vars": {
+    "y": 42
+   }
+  },
+  "status": "ok"
+ },
+ "features": [],
+ "graded": true,
+ "group": "bigstep-com",
+ "id": "a11",
+ "part": "A",
+ "request": {
+  "arith": "int",
+  "mode": "bigstep",
+  "program": {
+   "b": {
+    "k": "cmp",
+    "l": {
+     "k": "num",
+     "n": 1
+    },
+    "op": "<=",
+    "r": {
+     "k": "var",
+     "x": "x"
+    }
+   },
+   "c": {
+    "e": {
+     "k": "aop",
+     "l": {
+      "k": "var",
+      "x": "x"
+     },
+     "op": "-",
+     "r": {
+      "k": "num",
+      "n": 1
+     }
+    },
+    "k": "assign",
+    "x": "x"
+   },
+   "k": "while"
+  },
+  "state": {
+   "arrays": {},
+   "vars": {
+    "x": 3,
+    "y": 42
+   }
+  }
+ },
+ "rules": [
+  "Asgn",
+  "Leq",
+  "Num",
+  "Sub",
+  "Var",
+  "While-False",
+  "While-True"
+ ]
+}

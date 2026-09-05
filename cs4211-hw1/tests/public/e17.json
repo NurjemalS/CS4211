@@ -1,0 +1,159 @@
+{
+ "description": "wrapping multiplication, small-step",
+ "expected": {
+  "configs": [
+   {
+    "c": {
+     "e": {
+      "k": "aop",
+      "l": {
+       "k": "var",
+       "x": "k"
+      },
+      "op": "*",
+      "r": {
+       "k": "var",
+       "x": "k"
+      }
+     },
+     "k": "assign",
+     "x": "x"
+    },
+    "s": {
+     "arrays": {},
+     "vars": {
+      "k": 100000
+     }
+    }
+   },
+   {
+    "c": {
+     "e": {
+      "k": "aop",
+      "l": {
+       "k": "num",
+       "n": 100000
+      },
+      "op": "*",
+      "r": {
+       "k": "var",
+       "x": "k"
+      }
+     },
+     "k": "assign",
+     "x": "x"
+    },
+    "s": {
+     "arrays": {},
+     "vars": {
+      "k": 100000
+     }
+    }
+   },
+   {
+    "c": {
+     "e": {
+      "k": "aop",
+      "l": {
+       "k": "num",
+       "n": 100000
+      },
+      "op": "*",
+      "r": {
+       "k": "num",
+       "n": 100000
+      }
+     },
+     "k": "assign",
+     "x": "x"
+    },
+    "s": {
+     "arrays": {},
+     "vars": {
+      "k": 100000
+     }
+    }
+   },
+   {
+    "c": {
+     "e": {
+      "k": "num",
+      "n": 1410065408
+     },
+     "k": "assign",
+     "x": "x"
+    },
+    "s": {
+     "arrays": {},
+     "vars": {
+      "k": 100000
+     }
+    }
+   },
+   {
+    "c": {
+     "k": "skip"
+    },
+    "s": {
+     "arrays": {},
+     "vars": {
+      "k": 100000,
+      "x": 1410065408
+     }
+    }
+   }
+  ],
+  "final": {
+   "arrays": {},
+   "vars": {
+    "k": 100000,
+    "x": 1410065408
+   }
+  },
+  "status": "terminated",
+  "steps": 4
+ },
+ "features": [
+  "int32"
+ ],
+ "graded": true,
+ "group": "run",
+ "id": "e17",
+ "part": "D",
+ "request": {
+  "arith": "int32",
+  "budget": 50,
+  "mode": "run",
+  "program": {
+   "e": {
+    "k": "aop",
+    "l": {
+     "k": "var",
+     "x": "k"
+    },
+    "op": "*",
+    "r": {
+     "k": "var",
+     "x": "k"
+    }
+   },
+   "k": "assign",
+   "x": "x"
+  },
+  "state": {
+   "arrays": {},
+   "vars": {
+    "k": 100000
+   }
+  }
+ },
+ "rules": [
+  "A-Op",
+  "A-Op-L",
+  "A-Op-R",
+  "A-Op:*",
+  "A-Var",
+  "S-Asgn",
+  "S-Asgn-Step"
+ ]
+}

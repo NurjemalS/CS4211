@@ -1,0 +1,105 @@
+{
+ "description": "multiplication wraps",
+ "expected": {
+  "derivation": {
+   "in": {
+    "arrays": {},
+    "vars": {
+     "x": 100000
+    }
+   },
+   "out": {
+    "arrays": {},
+    "vars": {
+     "x": 1410065408
+    }
+   },
+   "prem": [
+    {
+     "in": {
+      "arrays": {},
+      "vars": {
+       "x": 100000
+      }
+     },
+     "prem": [
+      {
+       "in": {
+        "arrays": {},
+        "vars": {
+         "x": 100000
+        }
+       },
+       "prem": [],
+       "rule": "Var",
+       "subj": "x",
+       "val": 100000
+      },
+      {
+       "in": {
+        "arrays": {},
+        "vars": {
+         "x": 100000
+        }
+       },
+       "prem": [],
+       "rule": "Var",
+       "subj": "x",
+       "val": 100000
+      }
+     ],
+     "rule": "Mul",
+     "subj": "x * x",
+     "val": 1410065408
+    }
+   ],
+   "rule": "Asgn",
+   "subj": "x := x * x"
+  },
+  "final": {
+   "arrays": {},
+   "vars": {
+    "x": 1410065408
+   }
+  },
+  "status": "ok"
+ },
+ "features": [
+  "int32"
+ ],
+ "graded": true,
+ "group": "bigstep",
+ "id": "e06",
+ "part": "D",
+ "request": {
+  "arith": "int32",
+  "mode": "bigstep",
+  "program": {
+   "e": {
+    "k": "aop",
+    "l": {
+     "k": "var",
+     "x": "x"
+    },
+    "op": "*",
+    "r": {
+     "k": "var",
+     "x": "x"
+    }
+   },
+   "k": "assign",
+   "x": "x"
+  },
+  "state": {
+   "arrays": {},
+   "vars": {
+    "x": 100000
+   }
+  }
+ },
+ "rules": [
+  "Asgn",
+  "Mul",
+  "Var"
+ ]
+}

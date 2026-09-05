@@ -1,0 +1,32 @@
+{
+ "description": "an array the initial state does not provide",
+ "expected": {
+  "reasons": [
+   "array ghost is not provided by the initial state"
+  ],
+  "status": "malformed"
+ },
+ "graded": false,
+ "group": "malformed",
+ "id": "m01",
+ "request": {
+  "arith": "int",
+  "mode": "bigstep",
+  "program": {
+   "e": {
+    "a": "ghost",
+    "i": {
+     "k": "num",
+     "n": 0
+    },
+    "k": "aget"
+   },
+   "k": "assign",
+   "x": "x"
+  },
+  "state": {
+   "arrays": {},
+   "vars": {}
+  }
+ }
+}

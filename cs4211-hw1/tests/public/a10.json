@@ -1,0 +1,120 @@
+{
+ "description": "[While-False] at once; the frame is preserved",
+ "expected": {
+  "derivation": {
+   "in": {
+    "arrays": {},
+    "vars": {
+     "y": 42
+    }
+   },
+   "out": {
+    "arrays": {},
+    "vars": {
+     "y": 42
+    }
+   },
+   "prem": [
+    {
+     "in": {
+      "arrays": {},
+      "vars": {
+       "y": 42
+      }
+     },
+     "prem": [
+      {
+       "in": {
+        "arrays": {},
+        "vars": {
+         "y": 42
+        }
+       },
+       "prem": [],
+       "rule": "Num",
+       "subj": "1",
+       "val": 1
+      },
+      {
+       "in": {
+        "arrays": {},
+        "vars": {
+         "y": 42
+        }
+       },
+       "prem": [],
+       "rule": "Var",
+       "subj": "x",
+       "val": 0
+      }
+     ],
+     "rule": "Leq",
+     "subj": "1 <= x",
+     "val": false
+    }
+   ],
+   "rule": "While-False",
+   "subj": "while 1 <= x do x := x - 1"
+  },
+  "final": {
+   "arrays": {},
+   "vars": {
+    "y": 42
+   }
+  },
+  "status": "ok"
+ },
+ "features": [],
+ "graded": true,
+ "group": "bigstep-com",
+ "id": "a10",
+ "part": "A",
+ "request": {
+  "arith": "int",
+  "mode": "bigstep",
+  "program": {
+   "b": {
+    "k": "cmp",
+    "l": {
+     "k": "num",
+     "n": 1
+    },
+    "op": "<=",
+    "r": {
+     "k": "var",
+     "x": "x"
+    }
+   },
+   "c": {
+    "e": {
+     "k": "aop",
+     "l": {
+      "k": "var",
+      "x": "x"
+     },
+     "op": "-",
+     "r": {
+      "k": "num",
+      "n": 1
+     }
+    },
+    "k": "assign",
+    "x": "x"
+   },
+   "k": "while"
+  },
+  "state": {
+   "arrays": {},
+   "vars": {
+    "x": 0,
+    "y": 42
+   }
+  }
+ },
+ "rules": [
+  "Leq",
+  "Num",
+  "Var",
+  "While-False"
+ ]
+}

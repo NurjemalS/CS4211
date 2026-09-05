@@ -1,0 +1,100 @@
+{
+ "description": "wrapping addition in the SMALL-step relation",
+ "expected": {
+  "configs": [
+   {
+    "c": {
+     "e": {
+      "k": "aop",
+      "l": {
+       "k": "num",
+       "n": 2147483647
+      },
+      "op": "+",
+      "r": {
+       "k": "num",
+       "n": 1
+      }
+     },
+     "k": "assign",
+     "x": "x"
+    },
+    "s": {
+     "arrays": {},
+     "vars": {}
+    }
+   },
+   {
+    "c": {
+     "e": {
+      "k": "num",
+      "n": -2147483648
+     },
+     "k": "assign",
+     "x": "x"
+    },
+    "s": {
+     "arrays": {},
+     "vars": {}
+    }
+   },
+   {
+    "c": {
+     "k": "skip"
+    },
+    "s": {
+     "arrays": {},
+     "vars": {
+      "x": -2147483648
+     }
+    }
+   }
+  ],
+  "final": {
+   "arrays": {},
+   "vars": {
+    "x": -2147483648
+   }
+  },
+  "status": "terminated",
+  "steps": 2
+ },
+ "features": [
+  "int32"
+ ],
+ "graded": true,
+ "group": "run",
+ "id": "e16",
+ "part": "D",
+ "request": {
+  "arith": "int32",
+  "budget": 50,
+  "mode": "run",
+  "program": {
+   "e": {
+    "k": "aop",
+    "l": {
+     "k": "num",
+     "n": 2147483647
+    },
+    "op": "+",
+    "r": {
+     "k": "num",
+     "n": 1
+    }
+   },
+   "k": "assign",
+   "x": "x"
+  },
+  "state": {
+   "arrays": {},
+   "vars": {}
+  }
+ },
+ "rules": [
+  "A-Op",
+  "A-Op:+",
+  "S-Asgn",
+  "S-Asgn-Step"
+ ]
+}

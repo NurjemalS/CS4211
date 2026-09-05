@@ -1,0 +1,71 @@
+{
+ "description": "[S-Arr-Idx] reduces the index first",
+ "expected": {
+  "next": {
+   "c": {
+    "a": "a",
+    "e": {
+     "k": "num",
+     "n": 9
+    },
+    "i": {
+     "k": "num",
+     "n": 2
+    },
+    "k": "aset"
+   },
+   "s": {
+    "arrays": {
+     "a": [
+      0,
+      0,
+      0
+     ]
+    },
+    "vars": {
+     "i": 2
+    }
+   }
+  },
+  "status": "ok"
+ },
+ "features": [
+  "arrays"
+ ],
+ "graded": true,
+ "group": "step",
+ "id": "e11",
+ "part": "D",
+ "request": {
+  "arith": "int",
+  "mode": "step",
+  "program": {
+   "a": "a",
+   "e": {
+    "k": "num",
+    "n": 9
+   },
+   "i": {
+    "k": "var",
+    "x": "i"
+   },
+   "k": "aset"
+  },
+  "state": {
+   "arrays": {
+    "a": [
+     0,
+     0,
+     0
+    ]
+   },
+   "vars": {
+    "i": 2
+   }
+  }
+ },
+ "rules": [
+  "A-Var",
+  "S-Arr-Idx"
+ ]
+}

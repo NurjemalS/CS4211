@@ -1,0 +1,71 @@
+{
+ "description": "[Var] reads the state",
+ "expected": {
+  "derivation": {
+   "in": {
+    "arrays": {},
+    "vars": {
+     "y": 5
+    }
+   },
+   "out": {
+    "arrays": {},
+    "vars": {
+     "r": 5,
+     "y": 5
+    }
+   },
+   "prem": [
+    {
+     "in": {
+      "arrays": {},
+      "vars": {
+       "y": 5
+      }
+     },
+     "prem": [],
+     "rule": "Var",
+     "subj": "y",
+     "val": 5
+    }
+   ],
+   "rule": "Asgn",
+   "subj": "r := y"
+  },
+  "final": {
+   "arrays": {},
+   "vars": {
+    "r": 5,
+    "y": 5
+   }
+  },
+  "status": "ok"
+ },
+ "features": [],
+ "graded": true,
+ "group": "bigstep-expr",
+ "id": "a02",
+ "part": "A",
+ "request": {
+  "arith": "int",
+  "mode": "bigstep",
+  "program": {
+   "e": {
+    "k": "var",
+    "x": "y"
+   },
+   "k": "assign",
+   "x": "r"
+  },
+  "state": {
+   "arrays": {},
+   "vars": {
+    "y": 5
+   }
+  }
+ },
+ "rules": [
+  "Asgn",
+  "Var"
+ ]
+}

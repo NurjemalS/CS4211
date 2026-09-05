@@ -1,0 +1,158 @@
+{
+ "description": "[B-Con] applies `or` to two values",
+ "expected": {
+  "configs": [
+   {
+    "c": {
+     "b": {
+      "k": "bop",
+      "l": {
+       "k": "bool",
+       "v": true
+      },
+      "op": "or",
+      "r": {
+       "k": "bool",
+       "v": false
+      }
+     },
+     "f": {
+      "e": {
+       "k": "num",
+       "n": 2
+      },
+      "k": "assign",
+      "x": "r"
+     },
+     "k": "if",
+     "t": {
+      "e": {
+       "k": "num",
+       "n": 1
+      },
+      "k": "assign",
+      "x": "r"
+     }
+    },
+    "s": {
+     "arrays": {},
+     "vars": {}
+    }
+   },
+   {
+    "c": {
+     "b": {
+      "k": "bool",
+      "v": true
+     },
+     "f": {
+      "e": {
+       "k": "num",
+       "n": 2
+      },
+      "k": "assign",
+      "x": "r"
+     },
+     "k": "if",
+     "t": {
+      "e": {
+       "k": "num",
+       "n": 1
+      },
+      "k": "assign",
+      "x": "r"
+     }
+    },
+    "s": {
+     "arrays": {},
+     "vars": {}
+    }
+   },
+   {
+    "c": {
+     "e": {
+      "k": "num",
+      "n": 1
+     },
+     "k": "assign",
+     "x": "r"
+    },
+    "s": {
+     "arrays": {},
+     "vars": {}
+    }
+   },
+   {
+    "c": {
+     "k": "skip"
+    },
+    "s": {
+     "arrays": {},
+     "vars": {
+      "r": 1
+     }
+    }
+   }
+  ],
+  "final": {
+   "arrays": {},
+   "vars": {
+    "r": 1
+   }
+  },
+  "status": "terminated",
+  "steps": 3
+ },
+ "features": [],
+ "graded": true,
+ "group": "run",
+ "id": "b14",
+ "part": "B",
+ "request": {
+  "arith": "int",
+  "budget": 50,
+  "mode": "run",
+  "program": {
+   "b": {
+    "k": "bop",
+    "l": {
+     "k": "bool",
+     "v": true
+    },
+    "op": "or",
+    "r": {
+     "k": "bool",
+     "v": false
+    }
+   },
+   "f": {
+    "e": {
+     "k": "num",
+     "n": 2
+    },
+    "k": "assign",
+    "x": "r"
+   },
+   "k": "if",
+   "t": {
+    "e": {
+     "k": "num",
+     "n": 1
+    },
+    "k": "assign",
+    "x": "r"
+   }
+  },
+  "state": {
+   "arrays": {},
+   "vars": {}
+  }
+ },
+ "rules": [
+  "B-Con",
+  "B-Con:or",
+  "S-Asgn",
+  "S-If-Step",
+  "S-If-True"
+ ]
+}

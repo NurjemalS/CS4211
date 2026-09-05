@@ -1,0 +1,185 @@
+{
+ "description": "nested [Add]/[Mul]/[Sub]",
+ "expected": {
+  "derivation": {
+   "in": {
+    "arrays": {},
+    "vars": {
+     "x": 4,
+     "y": 10
+    }
+   },
+   "out": {
+    "arrays": {},
+    "vars": {
+     "r": 21,
+     "x": 4,
+     "y": 10
+    }
+   },
+   "prem": [
+    {
+     "in": {
+      "arrays": {},
+      "vars": {
+       "x": 4,
+       "y": 10
+      }
+     },
+     "prem": [
+      {
+       "in": {
+        "arrays": {},
+        "vars": {
+         "x": 4,
+         "y": 10
+        }
+       },
+       "prem": [
+        {
+         "in": {
+          "arrays": {},
+          "vars": {
+           "x": 4,
+           "y": 10
+          }
+         },
+         "prem": [],
+         "rule": "Var",
+         "subj": "x",
+         "val": 4
+        },
+        {
+         "in": {
+          "arrays": {},
+          "vars": {
+           "x": 4,
+           "y": 10
+          }
+         },
+         "prem": [],
+         "rule": "Num",
+         "subj": "3",
+         "val": 3
+        }
+       ],
+       "rule": "Mul",
+       "subj": "x * 3",
+       "val": 12
+      },
+      {
+       "in": {
+        "arrays": {},
+        "vars": {
+         "x": 4,
+         "y": 10
+        }
+       },
+       "prem": [
+        {
+         "in": {
+          "arrays": {},
+          "vars": {
+           "x": 4,
+           "y": 10
+          }
+         },
+         "prem": [],
+         "rule": "Var",
+         "subj": "y",
+         "val": 10
+        },
+        {
+         "in": {
+          "arrays": {},
+          "vars": {
+           "x": 4,
+           "y": 10
+          }
+         },
+         "prem": [],
+         "rule": "Num",
+         "subj": "1",
+         "val": 1
+        }
+       ],
+       "rule": "Sub",
+       "subj": "y - 1",
+       "val": 9
+      }
+     ],
+     "rule": "Add",
+     "subj": "x * 3 + (y - 1)",
+     "val": 21
+    }
+   ],
+   "rule": "Asgn",
+   "subj": "r := x * 3 + (y - 1)"
+  },
+  "final": {
+   "arrays": {},
+   "vars": {
+    "r": 21,
+    "x": 4,
+    "y": 10
+   }
+  },
+  "status": "ok"
+ },
+ "features": [],
+ "graded": true,
+ "group": "bigstep-expr",
+ "id": "a04",
+ "part": "A",
+ "request": {
+  "arith": "int",
+  "mode": "bigstep",
+  "program": {
+   "e": {
+    "k": "aop",
+    "l": {
+     "k": "aop",
+     "l": {
+      "k": "var",
+      "x": "x"
+     },
+     "op": "*",
+     "r": {
+      "k": "num",
+      "n": 3
+     }
+    },
+    "op": "+",
+    "r": {
+     "k": "aop",
+     "l": {
+      "k": "var",
+      "x": "y"
+     },
+     "op": "-",
+     "r": {
+      "k": "num",
+      "n": 1
+     }
+    }
+   },
+   "k": "assign",
+   "x": "r"
+  },
+  "state": {
+   "arrays": {},
+   "vars": {
+    "x": 4,
+    "y": 10
+   }
+  }
+ },
+ "rules": [
+  "Add",
+  "Asgn",
+  "Mul",
+  "Num",
+  "Sub",
+  "Var"
+ ]
+}

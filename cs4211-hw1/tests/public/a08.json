@@ -1,0 +1,159 @@
+{
+ "description": "[Seq] threads the state left to right",
+ "expected": {
+  "derivation": {
+   "in": {
+    "arrays": {},
+    "vars": {}
+   },
+   "out": {
+    "arrays": {},
+    "vars": {
+     "x": 1,
+     "y": 2
+    }
+   },
+   "prem": [
+    {
+     "in": {
+      "arrays": {},
+      "vars": {}
+     },
+     "out": {
+      "arrays": {},
+      "vars": {
+       "x": 1
+      }
+     },
+     "prem": [
+      {
+       "in": {
+        "arrays": {},
+        "vars": {}
+       },
+       "prem": [],
+       "rule": "Num",
+       "subj": "1",
+       "val": 1
+      }
+     ],
+     "rule": "Asgn",
+     "subj": "x := 1"
+    },
+    {
+     "in": {
+      "arrays": {},
+      "vars": {
+       "x": 1
+      }
+     },
+     "out": {
+      "arrays": {},
+      "vars": {
+       "x": 1,
+       "y": 2
+      }
+     },
+     "prem": [
+      {
+       "in": {
+        "arrays": {},
+        "vars": {
+         "x": 1
+        }
+       },
+       "prem": [
+        {
+         "in": {
+          "arrays": {},
+          "vars": {
+           "x": 1
+          }
+         },
+         "prem": [],
+         "rule": "Var",
+         "subj": "x",
+         "val": 1
+        },
+        {
+         "in": {
+          "arrays": {},
+          "vars": {
+           "x": 1
+          }
+         },
+         "prem": [],
+         "rule": "Num",
+         "subj": "1",
+         "val": 1
+        }
+       ],
+       "rule": "Add",
+       "subj": "x + 1",
+       "val": 2
+      }
+     ],
+     "rule": "Asgn",
+     "subj": "y := x + 1"
+    }
+   ],
+   "rule": "Seq",
+   "subj": "x := 1; y := x + 1"
+  },
+  "final": {
+   "arrays": {},
+   "vars": {
+    "x": 1,
+    "y": 2
+   }
+  },
+  "status": "ok"
+ },
+ "features": [],
+ "graded": true,
+ "group": "bigstep-com",
+ "id": "a08",
+ "part": "A",
+ "request": {
+  "arith": "int",
+  "mode": "bigstep",
+  "program": {
+   "k": "seq",
+   "l": {
+    "e": {
+     "k": "num",
+     "n": 1
+    },
+    "k": "assign",
+    "x": "x"
+   },
+   "r": {
+    "e": {
+     "k": "aop",
+     "l": {
+      "k": "var",
+      "x": "x"
+     },
+     "op": "+",
+     "r": {
+      "k": "num",
+      "n": 1
+     }
+    },
+    "k": "assign",
+    "x": "y"
+   }
+  },
+  "state": {
+   "arrays": {},
+   "vars": {}
+  }
+ },
+ "rules": [
+  "Add",
+  "Asgn",
+  "Num",
+  "Seq",
+  "Var"
+ ]
+}

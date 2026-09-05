@@ -1,0 +1,46 @@
+{
+ "description": "budget 0 is not enough",
+ "expected": {
+  "configs": [
+   {
+    "c": {
+     "e": {
+      "k": "num",
+      "n": 1
+     },
+     "k": "assign",
+     "x": "x"
+    },
+    "s": {
+     "arrays": {},
+     "vars": {}
+    }
+   }
+  ],
+  "status": "budget",
+  "steps": 0
+ },
+ "features": [],
+ "graded": true,
+ "group": "run",
+ "id": "c03",
+ "part": "B",
+ "request": {
+  "arith": "int",
+  "budget": 0,
+  "mode": "run",
+  "program": {
+   "e": {
+    "k": "num",
+    "n": 1
+   },
+   "k": "assign",
+   "x": "x"
+  },
+  "state": {
+   "arrays": {},
+   "vars": {}
+  }
+ },
+ "rules": []
+}

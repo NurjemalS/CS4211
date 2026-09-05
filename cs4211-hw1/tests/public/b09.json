@@ -1,0 +1,109 @@
+{
+ "description": "[B-Con-R]: `false and (x = 0)` still reduces its right operand",
+ "expected": {
+  "next": {
+   "c": {
+    "b": {
+     "k": "bop",
+     "l": {
+      "k": "bool",
+      "v": false
+     },
+     "op": "and",
+     "r": {
+      "k": "cmp",
+      "l": {
+       "k": "num",
+       "n": 0
+      },
+      "op": "=",
+      "r": {
+       "k": "num",
+       "n": 0
+      }
+     }
+    },
+    "f": {
+     "e": {
+      "k": "num",
+      "n": 2
+     },
+     "k": "assign",
+     "x": "r"
+    },
+    "k": "if",
+    "t": {
+     "e": {
+      "k": "num",
+      "n": 1
+     },
+     "k": "assign",
+     "x": "r"
+    }
+   },
+   "s": {
+    "arrays": {},
+    "vars": {}
+   }
+  },
+  "status": "ok"
+ },
+ "features": [],
+ "graded": true,
+ "group": "step",
+ "id": "b09",
+ "part": "B",
+ "request": {
+  "arith": "int",
+  "mode": "step",
+  "program": {
+   "b": {
+    "k": "bop",
+    "l": {
+     "k": "bool",
+     "v": false
+    },
+    "op": "and",
+    "r": {
+     "k": "cmp",
+     "l": {
+      "k": "var",
+      "x": "x"
+     },
+     "op": "=",
+     "r": {
+      "k": "num",
+      "n": 0
+     }
+    }
+   },
+   "f": {
+    "e": {
+     "k": "num",
+     "n": 2
+    },
+    "k": "assign",
+    "x": "r"
+   },
+   "k": "if",
+   "t": {
+    "e": {
+     "k": "num",
+     "n": 1
+    },
+    "k": "assign",
+    "x": "r"
+   }
+  },
+  "state": {
+   "arrays": {},
+   "vars": {}
+  }
+ },
+ "rules": [
+  "A-Var",
+  "B-Cmp-L",
+  "B-Con-R",
+  "S-If-Step"
+ ]
+}

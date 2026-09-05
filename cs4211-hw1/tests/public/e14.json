@@ -1,0 +1,43 @@
+{
+ "description": "an out-of-bounds read is stuck, not divergent",
+ "expected": {
+  "reason": "index 3 out of bounds for a",
+  "status": "stuck",
+  "steps": 0
+ },
+ "features": [
+  "arrays"
+ ],
+ "graded": true,
+ "group": "classify",
+ "id": "e14",
+ "part": "D",
+ "request": {
+  "arith": "int",
+  "budget": 500,
+  "mode": "classify",
+  "program": {
+   "e": {
+    "a": "a",
+    "i": {
+     "k": "num",
+     "n": 3
+    },
+    "k": "aget"
+   },
+   "k": "assign",
+   "x": "x"
+  },
+  "state": {
+   "arrays": {
+    "a": [
+     1,
+     2,
+     3
+    ]
+   },
+   "vars": {}
+  }
+ },
+ "rules": []
+}

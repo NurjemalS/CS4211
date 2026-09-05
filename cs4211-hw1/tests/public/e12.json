@@ -1,0 +1,80 @@
+{
+ "description": "[Or] does NOT short-circuit: this is stuck on 1/0",
+ "expected": {
+  "reason": "division by zero",
+  "status": "stuck"
+ },
+ "features": [
+  "division"
+ ],
+ "graded": true,
+ "group": "bigstep-expr",
+ "id": "e12",
+ "part": "D",
+ "request": {
+  "arith": "int",
+  "mode": "bigstep",
+  "program": {
+   "b": {
+    "k": "bop",
+    "l": {
+     "k": "cmp",
+     "l": {
+      "k": "var",
+      "x": "x"
+     },
+     "op": "=",
+     "r": {
+      "k": "num",
+      "n": 0
+     }
+    },
+    "op": "or",
+    "r": {
+     "k": "cmp",
+     "l": {
+      "k": "aop",
+      "l": {
+       "k": "num",
+       "n": 1
+      },
+      "op": "/",
+      "r": {
+       "k": "var",
+       "x": "x"
+      }
+     },
+     "op": "=",
+     "r": {
+      "k": "num",
+      "n": 0
+     }
+    }
+   },
+   "f": {
+    "e": {
+     "k": "num",
+     "n": 2
+    },
+    "k": "assign",
+    "x": "r"
+   },
+   "k": "if",
+   "t": {
+    "e": {
+     "k": "num",
+     "n": 1
+    },
+    "k": "assign",
+    "x": "r"
+   }
+  },
+  "state": {
+   "arrays": {},
+   "vars": {
+    "x": 0
+   }
+  }
+ },
+ "rules": []
+}

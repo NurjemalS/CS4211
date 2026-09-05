@@ -1,0 +1,79 @@
+{
+ "description": "choice inside a sequence",
+ "expected": {
+  "finals_found": [
+   {
+    "arrays": {},
+    "vars": {
+     "x": 1,
+     "y": 10
+    }
+   },
+   {
+    "arrays": {},
+    "vars": {
+     "x": 2,
+     "y": 20
+    }
+   }
+  ],
+  "status": "ok",
+  "stuck_found": false,
+  "truncated": false
+ },
+ "features": [
+  "choice"
+ ],
+ "graded": true,
+ "group": "bonus",
+ "id": "f04",
+ "part": "bonus",
+ "request": {
+  "arith": "int",
+  "budget": 500,
+  "mode": "explore",
+  "program": {
+   "k": "seq",
+   "l": {
+    "k": "choice",
+    "l": {
+     "e": {
+      "k": "num",
+      "n": 1
+     },
+     "k": "assign",
+     "x": "x"
+    },
+    "r": {
+     "e": {
+      "k": "num",
+      "n": 2
+     },
+     "k": "assign",
+     "x": "x"
+    }
+   },
+   "r": {
+    "e": {
+     "k": "aop",
+     "l": {
+      "k": "var",
+      "x": "x"
+     },
+     "op": "*",
+     "r": {
+      "k": "num",
+      "n": 10
+     }
+    },
+    "k": "assign",
+    "x": "y"
+   }
+  },
+  "state": {
+   "arrays": {},
+   "vars": {}
+  }
+ },
+ "rules": []
+}

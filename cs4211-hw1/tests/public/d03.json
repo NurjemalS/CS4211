@@ -1,0 +1,79 @@
+{
+ "description": "10 steps per iteration, and still no repeat",
+ "expected": {
+  "status": "unknown",
+  "steps": 500
+ },
+ "features": [],
+ "graded": true,
+ "group": "classify",
+ "id": "d03",
+ "part": "C",
+ "request": {
+  "arith": "int",
+  "budget": 500,
+  "mode": "classify",
+  "program": {
+   "b": {
+    "k": "bool",
+    "v": true
+   },
+   "c": {
+    "k": "seq",
+    "l": {
+     "e": {
+      "k": "aop",
+      "l": {
+       "k": "var",
+       "x": "i"
+      },
+      "op": "+",
+      "r": {
+       "k": "num",
+       "n": 1
+      }
+     },
+     "k": "assign",
+     "x": "i"
+    },
+    "r": {
+     "e": {
+      "k": "aop",
+      "l": {
+       "k": "var",
+       "x": "j"
+      },
+      "op": "-",
+      "r": {
+       "k": "num",
+       "n": 1
+      }
+     },
+     "k": "assign",
+     "x": "j"
+    }
+   },
+   "k": "while"
+  },
+  "state": {
+   "arrays": {},
+   "vars": {
+    "i": 5,
+    "j": 9
+   }
+  }
+ },
+ "rules": [
+  "A-Op",
+  "A-Op-L",
+  "A-Op:+",
+  "A-Op:-",
+  "A-Var",
+  "S-Asgn",
+  "S-Asgn-Step",
+  "S-If-True",
+  "S-Seq",
+  "S-Seq-Done",
+  "S-While"
+ ]
+}

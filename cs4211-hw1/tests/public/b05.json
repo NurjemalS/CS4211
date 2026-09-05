@@ -1,0 +1,50 @@
+{
+ "description": "[S-Seq-Done] costs a step and changes no state",
+ "expected": {
+  "next": {
+   "c": {
+    "e": {
+     "k": "num",
+     "n": 1
+    },
+    "k": "assign",
+    "x": "x"
+   },
+   "s": {
+    "arrays": {},
+    "vars": {}
+   }
+  },
+  "status": "ok"
+ },
+ "features": [],
+ "graded": true,
+ "group": "step",
+ "id": "b05",
+ "part": "B",
+ "request": {
+  "arith": "int",
+  "mode": "step",
+  "program": {
+   "k": "seq",
+   "l": {
+    "k": "skip"
+   },
+   "r": {
+    "e": {
+     "k": "num",
+     "n": 1
+    },
+    "k": "assign",
+    "x": "x"
+   }
+  },
+  "state": {
+   "arrays": {},
+   "vars": {}
+  }
+ },
+ "rules": [
+  "S-Seq-Done"
+ ]
+}

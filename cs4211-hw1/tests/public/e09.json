@@ -1,0 +1,86 @@
+{
+ "description": "bounds are checked BEFORE the value: stuck on the index, not the division",
+ "expected": {
+  "configs": [
+   {
+    "c": {
+     "a": "a",
+     "e": {
+      "k": "aop",
+      "l": {
+       "k": "num",
+       "n": 1
+      },
+      "op": "/",
+      "r": {
+       "k": "num",
+       "n": 0
+      }
+     },
+     "i": {
+      "k": "num",
+      "n": 5
+     },
+     "k": "aset"
+    },
+    "s": {
+     "arrays": {
+      "a": [
+       1,
+       2,
+       3
+      ]
+     },
+     "vars": {}
+    }
+   }
+  ],
+  "reason": "index 5 out of bounds for a",
+  "status": "stuck",
+  "steps": 0
+ },
+ "features": [
+  "arrays",
+  "division"
+ ],
+ "graded": true,
+ "group": "run",
+ "id": "e09",
+ "part": "D",
+ "request": {
+  "arith": "int",
+  "budget": 50,
+  "mode": "run",
+  "program": {
+   "a": "a",
+   "e": {
+    "k": "aop",
+    "l": {
+     "k": "num",
+     "n": 1
+    },
+    "op": "/",
+    "r": {
+     "k": "num",
+     "n": 0
+    }
+   },
+   "i": {
+    "k": "num",
+    "n": 5
+   },
+   "k": "aset"
+  },
+  "state": {
+   "arrays": {
+    "a": [
+     1,
+     2,
+     3
+    ]
+   },
+   "vars": {}
+  }
+ },
+ "rules": []
+}

@@ -1,0 +1,28 @@
+{
+ "description": "a numeral outside the int32 range",
+ "expected": {
+  "reasons": [
+   "numeral 2147483648 is not representable in int32"
+  ],
+  "status": "malformed"
+ },
+ "graded": false,
+ "group": "malformed",
+ "id": "m02",
+ "request": {
+  "arith": "int32",
+  "mode": "bigstep",
+  "program": {
+   "e": {
+    "k": "num",
+    "n": 2147483648
+   },
+   "k": "assign",
+   "x": "x"
+  },
+  "state": {
+   "arrays": {},
+   "vars": {}
+  }
+ }
+}

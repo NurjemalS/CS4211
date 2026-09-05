@@ -1,0 +1,30 @@
+{
+ "description": "an initial value outside the int32 range",
+ "expected": {
+  "reasons": [
+   "initial value of x (1099511627776) is not representable in int32"
+  ],
+  "status": "malformed"
+ },
+ "graded": false,
+ "group": "malformed",
+ "id": "m03",
+ "request": {
+  "arith": "int32",
+  "mode": "bigstep",
+  "program": {
+   "e": {
+    "k": "var",
+    "x": "x"
+   },
+   "k": "assign",
+   "x": "x"
+  },
+  "state": {
+   "arrays": {},
+   "vars": {
+    "x": 1099511627776
+   }
+  }
+ }
+}

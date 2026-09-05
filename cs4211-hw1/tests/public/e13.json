@@ -1,0 +1,39 @@
+{
+ "description": "division by zero is stuck",
+ "expected": {
+  "reason": "division by zero",
+  "status": "stuck"
+ },
+ "features": [
+  "division"
+ ],
+ "graded": true,
+ "group": "step",
+ "id": "e13",
+ "part": "D",
+ "request": {
+  "arith": "int",
+  "mode": "step",
+  "program": {
+   "e": {
+    "k": "aop",
+    "l": {
+     "k": "num",
+     "n": 1
+    },
+    "op": "/",
+    "r": {
+     "k": "num",
+     "n": 0
+    }
+   },
+   "k": "assign",
+   "x": "q"
+  },
+  "state": {
+   "arrays": {},
+   "vars": {}
+  }
+ },
+ "rules": []
+}

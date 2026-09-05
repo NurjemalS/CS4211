@@ -1,0 +1,66 @@
+{
+ "description": "[S-Asgn-Step] with [A-Var]: only the left operand reduces",
+ "expected": {
+  "next": {
+   "c": {
+    "e": {
+     "k": "aop",
+     "l": {
+      "k": "num",
+      "n": 5
+     },
+     "op": "+",
+     "r": {
+      "k": "num",
+      "n": 2
+     }
+    },
+    "k": "assign",
+    "x": "x"
+   },
+   "s": {
+    "arrays": {},
+    "vars": {
+     "y": 5
+    }
+   }
+  },
+  "status": "ok"
+ },
+ "features": [],
+ "graded": true,
+ "group": "step",
+ "id": "b02",
+ "part": "B",
+ "request": {
+  "arith": "int",
+  "mode": "step",
+  "program": {
+   "e": {
+    "k": "aop",
+    "l": {
+     "k": "var",
+     "x": "y"
+    },
+    "op": "+",
+    "r": {
+     "k": "num",
+     "n": 2
+    }
+   },
+   "k": "assign",
+   "x": "x"
+  },
+  "state": {
+   "arrays": {},
+   "vars": {
+    "y": 5
+   }
+  }
+ },
+ "rules": [
+  "A-Op-L",
+  "A-Var",
+  "S-Asgn-Step"
+ ]
+}

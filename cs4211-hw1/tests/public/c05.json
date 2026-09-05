@@ -1,0 +1,124 @@
+{
+ "description": "two [S-Seq-Done] steps before any work",
+ "expected": {
+  "configs": [
+   {
+    "c": {
+     "k": "seq",
+     "l": {
+      "k": "skip"
+     },
+     "r": {
+      "k": "seq",
+      "l": {
+       "k": "skip"
+      },
+      "r": {
+       "e": {
+        "k": "num",
+        "n": 4
+       },
+       "k": "assign",
+       "x": "x"
+      }
+     }
+    },
+    "s": {
+     "arrays": {},
+     "vars": {}
+    }
+   },
+   {
+    "c": {
+     "k": "seq",
+     "l": {
+      "k": "skip"
+     },
+     "r": {
+      "e": {
+       "k": "num",
+       "n": 4
+      },
+      "k": "assign",
+      "x": "x"
+     }
+    },
+    "s": {
+     "arrays": {},
+     "vars": {}
+    }
+   },
+   {
+    "c": {
+     "e": {
+      "k": "num",
+      "n": 4
+     },
+     "k": "assign",
+     "x": "x"
+    },
+    "s": {
+     "arrays": {},
+     "vars": {}
+    }
+   },
+   {
+    "c": {
+     "k": "skip"
+    },
+    "s": {
+     "arrays": {},
+     "vars": {
+      "x": 4
+     }
+    }
+   }
+  ],
+  "final": {
+   "arrays": {},
+   "vars": {
+    "x": 4
+   }
+  },
+  "status": "terminated",
+  "steps": 3
+ },
+ "features": [],
+ "graded": true,
+ "group": "run",
+ "id": "c05",
+ "part": "B",
+ "request": {
+  "arith": "int",
+  "budget": 50,
+  "mode": "run",
+  "program": {
+   "k": "seq",
+   "l": {
+    "k": "skip"
+   },
+   "r": {
+    "k": "seq",
+    "l": {
+     "k": "skip"
+    },
+    "r": {
+     "e": {
+      "k": "num",
+      "n": 4
+     },
+     "k": "assign",
+     "x": "x"
+    }
+   }
+  },
+  "state": {
+   "arrays": {},
+   "vars": {}
+  }
+ },
+ "rules": [
+  "S-Asgn",
+  "S-Seq-Done"
+ ]
+}

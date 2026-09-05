@@ -1,0 +1,1359 @@
+{
+ "description": "summation to 5",
+ "expected": {
+  "derivation": {
+   "in": {
+    "arrays": {},
+    "vars": {
+     "n": 5
+    }
+   },
+   "out": {
+    "arrays": {},
+    "vars": {
+     "i": 6,
+     "n": 5,
+     "s": 15
+    }
+   },
+   "prem": [
+    {
+     "in": {
+      "arrays": {},
+      "vars": {
+       "n": 5
+      }
+     },
+     "out": {
+      "arrays": {},
+      "vars": {
+       "i": 1,
+       "n": 5
+      }
+     },
+     "prem": [
+      {
+       "in": {
+        "arrays": {},
+        "vars": {
+         "n": 5
+        }
+       },
+       "prem": [],
+       "rule": "Num",
+       "subj": "1",
+       "val": 1
+      }
+     ],
+     "rule": "Asgn",
+     "subj": "i := 1"
+    },
+    {
+     "in": {
+      "arrays": {},
+      "vars": {
+       "i": 1,
+       "n": 5
+      }
+     },
+     "out": {
+      "arrays": {},
+      "vars": {
+       "i": 6,
+       "n": 5,
+       "s": 15
+      }
+     },
+     "prem": [
+      {
+       "in": {
+        "arrays": {},
+        "vars": {
+         "i": 1,
+         "n": 5
+        }
+       },
+       "out": {
+        "arrays": {},
+        "vars": {
+         "i": 1,
+         "n": 5
+        }
+       },
+       "prem": [
+        {
+         "in": {
+          "arrays": {},
+          "vars": {
+           "i": 1,
+           "n": 5
+          }
+         },
+         "prem": [],
+         "rule": "Num",
+         "subj": "0",
+         "val": 0
+        }
+       ],
+       "rule": "Asgn",
+       "subj": "s := 0"
+      },
+      {
+       "in": {
+        "arrays": {},
+        "vars": {
+         "i": 1,
+         "n": 5
+        }
+       },
+       "out": {
+        "arrays": {},
+        "vars": {
+         "i": 6,
+         "n": 5,
+         "s": 15
+        }
+       },
+       "prem": [
+        {
+         "in": {
+          "arrays": {},
+          "vars": {
+           "i": 1,
+           "n": 5
+          }
+         },
+         "prem": [
+          {
+           "in": {
+            "arrays": {},
+            "vars": {
+             "i": 1,
+             "n": 5
+            }
+           },
+           "prem": [],
+           "rule": "Var",
+           "subj": "i",
+           "val": 1
+          },
+          {
+           "in": {
+            "arrays": {},
+            "vars": {
+             "i": 1,
+             "n": 5
+            }
+           },
+           "prem": [],
+           "rule": "Var",
+           "subj": "n",
+           "val": 5
+          }
+         ],
+         "rule": "Leq",
+         "subj": "i <= n",
+         "val": true
+        },
+        {
+         "in": {
+          "arrays": {},
+          "vars": {
+           "i": 1,
+           "n": 5
+          }
+         },
+         "out": {
+          "arrays": {},
+          "vars": {
+           "i": 2,
+           "n": 5,
+           "s": 1
+          }
+         },
+         "prem": [
+          {
+           "in": {
+            "arrays": {},
+            "vars": {
+             "i": 1,
+             "n": 5
+            }
+           },
+           "out": {
+            "arrays": {},
+            "vars": {
+             "i": 1,
+             "n": 5,
+             "s": 1
+            }
+           },
+           "prem": [
+            {
+             "in": {
+              "arrays": {},
+              "vars": {
+               "i": 1,
+               "n": 5
+              }
+             },
+             "prem": [
+              {
+               "in": {
+                "arrays": {},
+                "vars": {
+                 "i": 1,
+                 "n": 5
+                }
+               },
+               "prem": [],
+               "rule": "Var",
+               "subj": "s",
+               "val": 0
+              },
+              {
+               "in": {
+                "arrays": {},
+                "vars": {
+                 "i": 1,
+                 "n": 5
+                }
+               },
+               "prem": [],
+               "rule": "Var",
+               "subj": "i",
+               "val": 1
+              }
+             ],
+             "rule": "Add",
+             "subj": "s + i",
+             "val": 1
+            }
+           ],
+           "rule": "Asgn",
+           "subj": "s := s + i"
+          },
+          {
+           "in": {
+            "arrays": {},
+            "vars": {
+             "i": 1,
+             "n": 5,
+             "s": 1
+            }
+           },
+           "out": {
+            "arrays": {},
+            "vars": {
+             "i": 2,
+             "n": 5,
+             "s": 1
+            }
+           },
+           "prem": [
+            {
+             "in": {
+              "arrays": {},
+              "vars": {
+               "i": 1,
+               "n": 5,
+               "s": 1
+              }
+             },
+             "prem": [
+              {
+               "in": {
+                "arrays": {},
+                "vars": {
+                 "i": 1,
+                 "n": 5,
+                 "s": 1
+                }
+               },
+               "prem": [],
+               "rule": "Var",
+               "subj": "i",
+               "val": 1
+              },
+              {
+               "in": {
+                "arrays": {},
+                "vars": {
+                 "i": 1,
+                 "n": 5,
+                 "s": 1
+                }
+               },
+               "prem": [],
+               "rule": "Num",
+               "subj": "1",
+               "val": 1
+              }
+             ],
+             "rule": "Add",
+             "subj": "i + 1",
+             "val": 2
+            }
+           ],
+           "rule": "Asgn",
+           "subj": "i := i + 1"
+          }
+         ],
+         "rule": "Seq",
+         "subj": "s := s + i; i := i + 1"
+        },
+        {
+         "in": {
+          "arrays": {},
+          "vars": {
+           "i": 2,
+           "n": 5,
+           "s": 1
+          }
+         },
+         "out": {
+          "arrays": {},
+          "vars": {
+           "i": 6,
+           "n": 5,
+           "s": 15
+          }
+         },
+         "prem": [
+          {
+           "in": {
+            "arrays": {},
+            "vars": {
+             "i": 2,
+             "n": 5,
+             "s": 1
+            }
+           },
+           "prem": [
+            {
+             "in": {
+              "arrays": {},
+              "vars": {
+               "i": 2,
+               "n": 5,
+               "s": 1
+              }
+             },
+             "prem": [],
+             "rule": "Var",
+             "subj": "i",
+             "val": 2
+            },
+            {
+             "in": {
+              "arrays": {},
+              "vars": {
+               "i": 2,
+               "n": 5,
+               "s": 1
+              }
+             },
+             "prem": [],
+             "rule": "Var",
+             "subj": "n",
+             "val": 5
+            }
+           ],
+           "rule": "Leq",
+           "subj": "i <= n",
+           "val": true
+          },
+          {
+           "in": {
+            "arrays": {},
+            "vars": {
+             "i": 2,
+             "n": 5,
+             "s": 1
+            }
+           },
+           "out": {
+            "arrays": {},
+            "vars": {
+             "i": 3,
+             "n": 5,
+             "s": 3
+            }
+           },
+           "prem": [
+            {
+             "in": {
+              "arrays": {},
+              "vars": {
+               "i": 2,
+               "n": 5,
+               "s": 1
+              }
+             },
+             "out": {
+              "arrays": {},
+              "vars": {
+               "i": 2,
+               "n": 5,
+               "s": 3
+              }
+             },
+             "prem": [
+              {
+               "in": {
+                "arrays": {},
+                "vars": {
+                 "i": 2,
+                 "n": 5,
+                 "s": 1
+                }
+               },
+               "prem": [
+                {
+                 "in": {
+                  "arrays": {},
+                  "vars": {
+                   "i": 2,
+                   "n": 5,
+                   "s": 1
+                  }
+                 },
+                 "prem": [],
+                 "rule": "Var",
+                 "subj": "s",
+                 "val": 1
+                },
+                {
+                 "in": {
+                  "arrays": {},
+                  "vars": {
+                   "i": 2,
+                   "n": 5,
+                   "s": 1
+                  }
+                 },
+                 "prem": [],
+                 "rule": "Var",
+                 "subj": "i",
+                 "val": 2
+                }
+               ],
+               "rule": "Add",
+               "subj": "s + i",
+               "val": 3
+              }
+             ],
+             "rule": "Asgn",
+             "subj": "s := s + i"
+            },
+            {
+             "in": {
+              "arrays": {},
+              "vars": {
+               "i": 2,
+               "n": 5,
+               "s": 3
+              }
+             },
+             "out": {
+              "arrays": {},
+              "vars": {
+               "i": 3,
+               "n": 5,
+               "s": 3
+              }
+             },
+             "prem": [
+              {
+               "in": {
+                "arrays": {},
+                "vars": {
+                 "i": 2,
+                 "n": 5,
+                 "s": 3
+                }
+               },
+               "prem": [
+                {
+                 "in": {
+                  "arrays": {},
+                  "vars": {
+                   "i": 2,
+                   "n": 5,
+                   "s": 3
+                  }
+                 },
+                 "prem": [],
+                 "rule": "Var",
+                 "subj": "i",
+                 "val": 2
+                },
+                {
+                 "in": {
+                  "arrays": {},
+                  "vars": {
+                   "i": 2,
+                   "n": 5,
+                   "s": 3
+                  }
+                 },
+                 "prem": [],
+                 "rule": "Num",
+                 "subj": "1",
+                 "val": 1
+                }
+               ],
+               "rule": "Add",
+               "subj": "i + 1",
+               "val": 3
+              }
+             ],
+             "rule": "Asgn",
+             "subj": "i := i + 1"
+            }
+           ],
+           "rule": "Seq",
+           "subj": "s := s + i; i := i + 1"
+          },
+          {
+           "in": {
+            "arrays": {},
+            "vars": {
+             "i": 3,
+             "n": 5,
+             "s": 3
+            }
+           },
+           "out": {
+            "arrays": {},
+            "vars": {
+             "i": 6,
+             "n": 5,
+             "s": 15
+            }
+           },
+           "prem": [
+            {
+             "in": {
+              "arrays": {},
+              "vars": {
+               "i": 3,
+               "n": 5,
+               "s": 3
+              }
+             },
+             "prem": [
+              {
+               "in": {
+                "arrays": {},
+                "vars": {
+                 "i": 3,
+                 "n": 5,
+                 "s": 3
+                }
+               },
+               "prem": [],
+               "rule": "Var",
+               "subj": "i",
+               "val": 3
+              },
+              {
+               "in": {
+                "arrays": {},
+                "vars": {
+                 "i": 3,
+                 "n": 5,
+                 "s": 3
+                }
+               },
+               "prem": [],
+               "rule": "Var",
+               "subj": "n",
+               "val": 5
+              }
+             ],
+             "rule": "Leq",
+             "subj": "i <= n",
+             "val": true
+            },
+            {
+             "in": {
+              "arrays": {},
+              "vars": {
+               "i": 3,
+               "n": 5,
+               "s": 3
+              }
+             },
+             "out": {
+              "arrays": {},
+              "vars": {
+               "i": 4,
+               "n": 5,
+               "s": 6
+              }
+             },
+             "prem": [
+              {
+               "in": {
+                "arrays": {},
+                "vars": {
+                 "i": 3,
+                 "n": 5,
+                 "s": 3
+                }
+               },
+               "out": {
+                "arrays": {},
+                "vars": {
+                 "i": 3,
+                 "n": 5,
+                 "s": 6
+                }
+               },
+               "prem": [
+                {
+                 "in": {
+                  "arrays": {},
+                  "vars": {
+                   "i": 3,
+                   "n": 5,
+                   "s": 3
+                  }
+                 },
+                 "prem": [
+                  {
+                   "in": {
+                    "arrays": {},
+                    "vars": {
+                     "i": 3,
+                     "n": 5,
+                     "s": 3
+                    }
+                   },
+                   "prem": [],
+                   "rule": "Var",
+                   "subj": "s",
+                   "val": 3
+                  },
+                  {
+                   "in": {
+                    "arrays": {},
+                    "vars": {
+                     "i": 3,
+                     "n": 5,
+                     "s": 3
+                    }
+                   },
+                   "prem": [],
+                   "rule": "Var",
+                   "subj": "i",
+                   "val": 3
+                  }
+                 ],
+                 "rule": "Add",
+                 "subj": "s + i",
+                 "val": 6
+                }
+               ],
+               "rule": "Asgn",
+               "subj": "s := s + i"
+              },
+              {
+               "in": {
+                "arrays": {},
+                "vars": {
+                 "i": 3,
+                 "n": 5,
+                 "s": 6
+                }
+               },
+               "out": {
+                "arrays": {},
+                "vars": {
+                 "i": 4,
+                 "n": 5,
+                 "s": 6
+                }
+               },
+               "prem": [
+                {
+                 "in": {
+                  "arrays": {},
+                  "vars": {
+                   "i": 3,
+                   "n": 5,
+                   "s": 6
+                  }
+                 },
+                 "prem": [
+                  {
+                   "in": {
+                    "arrays": {},
+                    "vars": {
+                     "i": 3,
+                     "n": 5,
+                     "s": 6
+                    }
+                   },
+                   "prem": [],
+                   "rule": "Var",
+                   "subj": "i",
+                   "val": 3
+                  },
+                  {
+                   "in": {
+                    "arrays": {},
+                    "vars": {
+                     "i": 3,
+                     "n": 5,
+                     "s": 6
+                    }
+                   },
+                   "prem": [],
+                   "rule": "Num",
+                   "subj": "1",
+                   "val": 1
+                  }
+                 ],
+                 "rule": "Add",
+                 "subj": "i + 1",
+                 "val": 4
+                }
+               ],
+               "rule": "Asgn",
+               "subj": "i := i + 1"
+              }
+             ],
+             "rule": "Seq",
+             "subj": "s := s + i; i := i + 1"
+            },
+            {
+             "in": {
+              "arrays": {},
+              "vars": {
+               "i": 4,
+               "n": 5,
+               "s": 6
+              }
+             },
+             "out": {
+              "arrays": {},
+              "vars": {
+               "i": 6,
+               "n": 5,
+               "s": 15
+              }
+             },
+             "prem": [
+              {
+               "in": {
+                "arrays": {},
+                "vars": {
+                 "i": 4,
+                 "n": 5,
+                 "s": 6
+                }
+               },
+               "prem": [
+                {
+                 "in": {
+                  "arrays": {},
+                  "vars": {
+                   "i": 4,
+                   "n": 5,
+                   "s": 6
+                  }
+                 },
+                 "prem": [],
+                 "rule": "Var",
+                 "subj": "i",
+                 "val": 4
+                },
+                {
+                 "in": {
+                  "arrays": {},
+                  "vars": {
+                   "i": 4,
+                   "n": 5,
+                   "s": 6
+                  }
+                 },
+                 "prem": [],
+                 "rule": "Var",
+                 "subj": "n",
+                 "val": 5
+                }
+               ],
+               "rule": "Leq",
+               "subj": "i <= n",
+               "val": true
+              },
+              {
+               "in": {
+                "arrays": {},
+                "vars": {
+                 "i": 4,
+                 "n": 5,
+                 "s": 6
+                }
+               },
+               "out": {
+                "arrays": {},
+                "vars": {
+                 "i": 5,
+                 "n": 5,
+                 "s": 10
+                }
+               },
+               "prem": [
+                {
+                 "in": {
+                  "arrays": {},
+                  "vars": {
+                   "i": 4,
+                   "n": 5,
+                   "s": 6
+                  }
+                 },
+                 "out": {
+                  "arrays": {},
+                  "vars": {
+                   "i": 4,
+                   "n": 5,
+                   "s": 10
+                  }
+                 },
+                 "prem": [
+                  {
+                   "in": {
+                    "arrays": {},
+                    "vars": {
+                     "i": 4,
+                     "n": 5,
+                     "s": 6
+                    }
+                   },
+                   "prem": [
+                    {
+                     "in": {
+                      "arrays": {},
+                      "vars": {
+                       "i": 4,
+                       "n": 5,
+                       "s": 6
+                      }
+                     },
+                     "prem": [],
+                     "rule": "Var",
+                     "subj": "s",
+                     "val": 6
+                    },
+                    {
+                     "in": {
+                      "arrays": {},
+                      "vars": {
+                       "i": 4,
+                       "n": 5,
+                       "s": 6
+                      }
+                     },
+                     "prem": [],
+                     "rule": "Var",
+                     "subj": "i",
+                     "val": 4
+                    }
+                   ],
+                   "rule": "Add",
+                   "subj": "s + i",
+                   "val": 10
+                  }
+                 ],
+                 "rule": "Asgn",
+                 "subj": "s := s + i"
+                },
+                {
+                 "in": {
+                  "arrays": {},
+                  "vars": {
+                   "i": 4,
+                   "n": 5,
+                   "s": 10
+                  }
+                 },
+                 "out": {
+                  "arrays": {},
+                  "vars": {
+                   "i": 5,
+                   "n": 5,
+                   "s": 10
+                  }
+                 },
+                 "prem": [
+                  {
+                   "in": {
+                    "arrays": {},
+                    "vars": {
+                     "i": 4,
+                     "n": 5,
+                     "s": 10
+                    }
+                   },
+                   "prem": [
+                    {
+                     "in": {
+                      "arrays": {},
+                      "vars": {
+                       "i": 4,
+                       "n": 5,
+                       "s": 10
+                      }
+                     },
+                     "prem": [],
+                     "rule": "Var",
+                     "subj": "i",
+                     "val": 4
+                    },
+                    {
+                     "in": {
+                      "arrays": {},
+                      "vars": {
+                       "i": 4,
+                       "n": 5,
+                       "s": 10
+                      }
+                     },
+                     "prem": [],
+                     "rule": "Num",
+                     "subj": "1",
+                     "val": 1
+                    }
+                   ],
+                   "rule": "Add",
+                   "subj": "i + 1",
+                   "val": 5
+                  }
+                 ],
+                 "rule": "Asgn",
+                 "subj": "i := i + 1"
+                }
+               ],
+               "rule": "Seq",
+               "subj": "s := s + i; i := i + 1"
+              },
+              {
+               "in": {
+                "arrays": {},
+                "vars": {
+                 "i": 5,
+                 "n": 5,
+                 "s": 10
+                }
+               },
+               "out": {
+                "arrays": {},
+                "vars": {
+                 "i": 6,
+                 "n": 5,
+                 "s": 15
+                }
+               },
+               "prem": [
+                {
+                 "in": {
+                  "arrays": {},
+                  "vars": {
+                   "i": 5,
+                   "n": 5,
+                   "s": 10
+                  }
+                 },
+                 "prem": [
+                  {
+                   "in": {
+                    "arrays": {},
+                    "vars": {
+                     "i": 5,
+                     "n": 5,
+                     "s": 10
+                    }
+                   },
+                   "prem": [],
+                   "rule": "Var",
+                   "subj": "i",
+                   "val": 5
+                  },
+                  {
+                   "in": {
+                    "arrays": {},
+                    "vars": {
+                     "i": 5,
+                     "n": 5,
+                     "s": 10
+                    }
+                   },
+                   "prem": [],
+                   "rule": "Var",
+                   "subj": "n",
+                   "val": 5
+                  }
+                 ],
+                 "rule": "Leq",
+                 "subj": "i <= n",
+                 "val": true
+                },
+                {
+                 "in": {
+                  "arrays": {},
+                  "vars": {
+                   "i": 5,
+                   "n": 5,
+                   "s": 10
+                  }
+                 },
+                 "out": {
+                  "arrays": {},
+                  "vars": {
+                   "i": 6,
+                   "n": 5,
+                   "s": 15
+                  }
+                 },
+                 "prem": [
+                  {
+                   "in": {
+                    "arrays": {},
+                    "vars": {
+                     "i": 5,
+                     "n": 5,
+                     "s": 10
+                    }
+                   },
+                   "out": {
+                    "arrays": {},
+                    "vars": {
+                     "i": 5,
+                     "n": 5,
+                     "s": 15
+                    }
+                   },
+                   "prem": [
+                    {
+                     "in": {
+                      "arrays": {},
+                      "vars": {
+                       "i": 5,
+                       "n": 5,
+                       "s": 10
+                      }
+                     },
+                     "prem": [
+                      {
+                       "in": {
+                        "arrays": {},
+                        "vars": {
+                         "i": 5,
+                         "n": 5,
+                         "s": 10
+                        }
+                       },
+                       "prem": [],
+                       "rule": "Var",
+                       "subj": "s",
+                       "val": 10
+                      },
+                      {
+                       "in": {
+                        "arrays": {},
+                        "vars": {
+                         "i": 5,
+                         "n": 5,
+                         "s": 10
+                        }
+                       },
+                       "prem": [],
+                       "rule": "Var",
+                       "subj": "i",
+                       "val": 5
+                      }
+                     ],
+                     "rule": "Add",
+                     "subj": "s + i",
+                     "val": 15
+                    }
+                   ],
+                   "rule": "Asgn",
+                   "subj": "s := s + i"
+                  },
+                  {
+                   "in": {
+                    "arrays": {},
+                    "vars": {
+                     "i": 5,
+                     "n": 5,
+                     "s": 15
+                    }
+                   },
+                   "out": {
+                    "arrays": {},
+                    "vars": {
+                     "i": 6,
+                     "n": 5,
+                     "s": 15
+                    }
+                   },
+                   "prem": [
+                    {
+                     "in": {
+                      "arrays": {},
+                      "vars": {
+                       "i": 5,
+                       "n": 5,
+                       "s": 15
+                      }
+                     },
+                     "prem": [
+                      {
+                       "in": {
+                        "arrays": {},
+                        "vars": {
+                         "i": 5,
+                         "n": 5,
+                         "s": 15
+                        }
+                       },
+                       "prem": [],
+                       "rule": "Var",
+                       "subj": "i",
+                       "val": 5
+                      },
+                      {
+                       "in": {
+                        "arrays": {},
+                        "vars": {
+                         "i": 5,
+                         "n": 5,
+                         "s": 15
+                        }
+                       },
+                       "prem": [],
+                       "rule": "Num",
+                       "subj": "1",
+                       "val": 1
+                      }
+                     ],
+                     "rule": "Add",
+                     "subj": "i + 1",
+                     "val": 6
+                    }
+                   ],
+                   "rule": "Asgn",
+                   "subj": "i := i + 1"
+                  }
+                 ],
+                 "rule": "Seq",
+                 "subj": "s := s + i; i := i + 1"
+                },
+                {
+                 "in": {
+                  "arrays": {},
+                  "vars": {
+                   "i": 6,
+                   "n": 5,
+                   "s": 15
+                  }
+                 },
+                 "out": {
+                  "arrays": {},
+                  "vars": {
+                   "i": 6,
+                   "n": 5,
+                   "s": 15
+                  }
+                 },
+                 "prem": [
+                  {
+                   "in": {
+                    "arrays": {},
+                    "vars": {
+                     "i": 6,
+                     "n": 5,
+                     "s": 15
+                    }
+                   },
+                   "prem": [
+                    {
+                     "in": {
+                      "arrays": {},
+                      "vars": {
+                       "i": 6,
+                       "n": 5,
+                       "s": 15
+                      }
+                     },
+                     "prem": [],
+                     "rule": "Var",
+                     "subj": "i",
+                     "val": 6
+                    },
+                    {
+                     "in": {
+                      "arrays": {},
+                      "vars": {
+                       "i": 6,
+                       "n": 5,
+                       "s": 15
+                      }
+                     },
+                     "prem": [],
+                     "rule": "Var",
+                     "subj": "n",
+                     "val": 5
+                    }
+                   ],
+                   "rule": "Leq",
+                   "subj": "i <= n",
+                   "val": false
+                  }
+                 ],
+                 "rule": "While-False",
+                 "subj": "while i <= n do s := s + i; i := i + 1"
+                }
+               ],
+               "rule": "While-True",
+               "subj": "while i <= n do s := s + i; i := i + 1"
+              }
+             ],
+             "rule": "While-True",
+             "subj": "while i <= n do s := s + i; i := i + 1"
+            }
+           ],
+           "rule": "While-True",
+           "subj": "while i <= n do s := s + i; i := i + 1"
+          }
+         ],
+         "rule": "While-True",
+         "subj": "while i <= n do s := s + i; i := i + 1"
+        }
+       ],
+       "rule": "While-True",
+       "subj": "while i <= n do s := s + i; i := i + 1"
+      }
+     ],
+     "rule": "Seq",
+     "subj": "s := 0; while i <= n do s := s + i; i := i + 1"
+    }
+   ],
+   "rule": "Seq",
+   "subj": "i := 1; s := 0; while i <= n do s := s + i; i := i + 1"
+  },
+  "final": {
+   "arrays": {},
+   "vars": {
+    "i": 6,
+    "n": 5,
+    "s": 15
+   }
+  },
+  "status": "ok"
+ },
+ "features": [],
+ "graded": true,
+ "group": "bigstep-com",
+ "id": "a13",
+ "part": "A",
+ "request": {
+  "arith": "int",
+  "mode": "bigstep",
+  "program": {
+   "k": "seq",
+   "l": {
+    "e": {
+     "k": "num",
+     "n": 1
+    },
+    "k": "assign",
+    "x": "i"
+   },
+   "r": {
+    "k": "seq",
+    "l": {
+     "e": {
+      "k": "num",
+      "n": 0
+     },
+     "k": "assign",
+     "x": "s"
+    },
+    "r": {
+     "b": {
+      "k": "cmp",
+      "l": {
+       "k": "var",
+       "x": "i"
+      },
+      "op": "<=",
+      "r": {
+       "k": "var",
+       "x": "n"
+      }
+     },
+     "c": {
+      "k": "seq",
+      "l": {
+       "e": {
+        "k": "aop",
+        "l": {
+         "k": "var",
+         "x": "s"
+        },
+        "op": "+",
+        "r": {
+         "k": "var",
+         "x": "i"
+        }
+       },
+       "k": "assign",
+       "x": "s"
+      },
+      "r": {
+       "e": {
+        "k": "aop",
+        "l": {
+         "k": "var",
+         "x": "i"
+        },
+        "op": "+",
+        "r": {
+         "k": "num",
+         "n": 1
+        }
+       },
+       "k": "assign",
+       "x": "i"
+      }
+     },
+     "k": "while"
+    }
+   }
+  },
+  "state": {
+   "arrays": {},
+   "vars": {
+    "i": 0,
+    "n": 5,
+    "s": 0
+   }
+  }
+ },
+ "rules": [
+  "Add",
+  "Asgn",
+  "Leq",
+  "Num",
+  "Seq",
+  "Var",
+  "While-False",
+  "While-True"
+ ]
+}

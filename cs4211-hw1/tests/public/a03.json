@@ -1,0 +1,59 @@
+{
+ "description": "states are total: an unmentioned variable reads as 0",
+ "expected": {
+  "derivation": {
+   "in": {
+    "arrays": {},
+    "vars": {}
+   },
+   "out": {
+    "arrays": {},
+    "vars": {}
+   },
+   "prem": [
+    {
+     "in": {
+      "arrays": {},
+      "vars": {}
+     },
+     "prem": [],
+     "rule": "Var",
+     "subj": "ghost",
+     "val": 0
+    }
+   ],
+   "rule": "Asgn",
+   "subj": "r := ghost"
+  },
+  "final": {
+   "arrays": {},
+   "vars": {}
+  },
+  "status": "ok"
+ },
+ "features": [],
+ "graded": true,
+ "group": "bigstep-expr",
+ "id": "a03",
+ "part": "A",
+ "request": {
+  "arith": "int",
+  "mode": "bigstep",
+  "program": {
+   "e": {
+    "k": "var",
+    "x": "ghost"
+   },
+   "k": "assign",
+   "x": "r"
+  },
+  "state": {
+   "arrays": {},
+   "vars": {}
+  }
+ },
+ "rules": [
+  "Asgn",
+  "Var"
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "description": "parallel composition is not part of the language",
+ "expected": {
+  "reasons": [
+   "parallel composition is not part of the language"
+  ],
+  "status": "malformed"
+ },
+ "graded": false,
+ "group": "malformed",
+ "id": "m04",
+ "request": {
+  "arith": "int",
+  "mode": "bigstep",
+  "program": {
+   "k": "par",
+   "l": {
+    "k": "skip"
+   },
+   "r": {
+    "k": "skip"
+   }
+  },
+  "state": {
+   "arrays": {},
+   "vars": {}
+  }
+ }
+}

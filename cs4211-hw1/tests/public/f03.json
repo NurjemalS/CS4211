@@ -1,0 +1,45 @@
+{
+ "description": "canonical states: skip and x := 0 agree here",
+ "expected": {
+  "finals_found": [
+   {
+    "arrays": {},
+    "vars": {}
+   }
+  ],
+  "status": "ok",
+  "stuck_found": false,
+  "truncated": false
+ },
+ "features": [
+  "choice"
+ ],
+ "graded": true,
+ "group": "bonus",
+ "id": "f03",
+ "part": "bonus",
+ "request": {
+  "arith": "int",
+  "budget": 500,
+  "mode": "explore",
+  "program": {
+   "k": "choice",
+   "l": {
+    "k": "skip"
+   },
+   "r": {
+    "e": {
+     "k": "num",
+     "n": 0
+    },
+    "k": "assign",
+    "x": "x"
+   }
+  },
+  "state": {
+   "arrays": {},
+   "vars": {}
+  }
+ },
+ "rules": []
+}

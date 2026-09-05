@@ -1,0 +1,252 @@
+{
+ "description": "[And] and [Not]; connectives are strict",
+ "expected": {
+  "derivation": {
+   "in": {
+    "arrays": {},
+    "vars": {
+     "x": 2,
+     "y": 9
+    }
+   },
+   "out": {
+    "arrays": {},
+    "vars": {
+     "r": 1,
+     "x": 2,
+     "y": 9
+    }
+   },
+   "prem": [
+    {
+     "in": {
+      "arrays": {},
+      "vars": {
+       "x": 2,
+       "y": 9
+      }
+     },
+     "prem": [
+      {
+       "in": {
+        "arrays": {},
+        "vars": {
+         "x": 2,
+         "y": 9
+        }
+       },
+       "prem": [
+        {
+         "in": {
+          "arrays": {},
+          "vars": {
+           "x": 2,
+           "y": 9
+          }
+         },
+         "prem": [],
+         "rule": "Var",
+         "subj": "x",
+         "val": 2
+        },
+        {
+         "in": {
+          "arrays": {},
+          "vars": {
+           "x": 2,
+           "y": 9
+          }
+         },
+         "prem": [],
+         "rule": "Num",
+         "subj": "3",
+         "val": 3
+        }
+       ],
+       "rule": "Leq",
+       "subj": "x <= 3",
+       "val": true
+      },
+      {
+       "in": {
+        "arrays": {},
+        "vars": {
+         "x": 2,
+         "y": 9
+        }
+       },
+       "prem": [
+        {
+         "in": {
+          "arrays": {},
+          "vars": {
+           "x": 2,
+           "y": 9
+          }
+         },
+         "prem": [
+          {
+           "in": {
+            "arrays": {},
+            "vars": {
+             "x": 2,
+             "y": 9
+            }
+           },
+           "prem": [],
+           "rule": "Var",
+           "subj": "y",
+           "val": 9
+          },
+          {
+           "in": {
+            "arrays": {},
+            "vars": {
+             "x": 2,
+             "y": 9
+            }
+           },
+           "prem": [],
+           "rule": "Num",
+           "subj": "0",
+           "val": 0
+          }
+         ],
+         "rule": "Eq",
+         "subj": "y = 0",
+         "val": false
+        }
+       ],
+       "rule": "Not",
+       "subj": "not (y = 0)",
+       "val": true
+      }
+     ],
+     "rule": "And",
+     "subj": "x <= 3 and not (y = 0)",
+     "val": true
+    },
+    {
+     "in": {
+      "arrays": {},
+      "vars": {
+       "x": 2,
+       "y": 9
+      }
+     },
+     "out": {
+      "arrays": {},
+      "vars": {
+       "r": 1,
+       "x": 2,
+       "y": 9
+      }
+     },
+     "prem": [
+      {
+       "in": {
+        "arrays": {},
+        "vars": {
+         "x": 2,
+         "y": 9
+        }
+       },
+       "prem": [],
+       "rule": "Num",
+       "subj": "1",
+       "val": 1
+      }
+     ],
+     "rule": "Asgn",
+     "subj": "r := 1"
+    }
+   ],
+   "rule": "If-True"
+  },
+  "final": {
+   "arrays": {},
+   "vars": {
+    "r": 1,
+    "x": 2,
+    "y": 9
+   }
+  },
+  "status": "ok"
+ },
+ "features": [],
+ "graded": true,
+ "group": "bigstep-expr",
+ "id": "a05",
+ "part": "A",
+ "request": {
+  "arith": "int",
+  "mode": "bigstep",
+  "program": {
+   "b": {
+    "k": "bop",
+    "l": {
+     "k": "cmp",
+     "l": {
+      "k": "var",
+      "x": "x"
+     },
+     "op": "<=",
+     "r": {
+      "k": "num",
+      "n": 3
+     }
+    },
+    "op": "and",
+    "r": {
+     "e": {
+      "k": "cmp",
+      "l": {
+       "k": "var",
+       "x": "y"
+      },
+      "op": "=",
+      "r": {
+       "k": "num",
+       "n": 0
+      }
+     },
+     "k": "not"
+    }
+   },
+   "f": {
+    "e": {
+     "k": "num",
+     "n": 2
+    },
+    "k": "assign",
+    "x": "r"
+   },
+   "k": "if",
+   "t": {
+    "e": {
+     "k": "num",
+     "n": 1
+    },
+    "k": "assign",
+    "x": "r"
+   }
+  },
+  "state": {
+   "arrays": {},
+   "vars": {
+    "x": 2,
+    "y": 9
+   }
+  }
+ },
+ "rules": [
+  "And",
+  "Asgn",
+  "Eq",
+  "If-True",
+  "Leq",
+  "Not",
+  "Num",
+  "Var"
+ ]
+}

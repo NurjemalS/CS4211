@@ -1,0 +1,104 @@
+{
+ "description": "[True] and [If-True] on a literal guard",
+ "expected": {
+  "derivation": {
+   "in": {
+    "arrays": {},
+    "vars": {}
+   },
+   "out": {
+    "arrays": {},
+    "vars": {
+     "r": 1
+    }
+   },
+   "prem": [
+    {
+     "in": {
+      "arrays": {},
+      "vars": {}
+     },
+     "prem": [],
+     "rule": "True",
+     "val": true
+    },
+    {
+     "in": {
+      "arrays": {},
+      "vars": {}
+     },
+     "out": {
+      "arrays": {},
+      "vars": {
+       "r": 1
+      }
+     },
+     "prem": [
+      {
+       "in": {
+        "arrays": {},
+        "vars": {}
+       },
+       "prem": [],
+       "rule": "Num",
+       "subj": "1",
+       "val": 1
+      }
+     ],
+     "rule": "Asgn",
+     "subj": "r := 1"
+    }
+   ],
+   "rule": "If-True"
+  },
+  "final": {
+   "arrays": {},
+   "vars": {
+    "r": 1
+   }
+  },
+  "status": "ok"
+ },
+ "features": [],
+ "graded": true,
+ "group": "bigstep-expr",
+ "id": "a06",
+ "part": "A",
+ "request": {
+  "arith": "int",
+  "mode": "bigstep",
+  "program": {
+   "b": {
+    "k": "bool",
+    "v": true
+   },
+   "f": {
+    "e": {
+     "k": "num",
+     "n": 2
+    },
+    "k": "assign",
+    "x": "r"
+   },
+   "k": "if",
+   "t": {
+    "e": {
+     "k": "num",
+     "n": 1
+    },
+    "k": "assign",
+    "x": "r"
+   }
+  },
+  "state": {
+   "arrays": {},
+   "vars": {}
+  }
+ },
+ "rules": [
+  "Asgn",
+  "If-True",
+  "Num",
+  "True"
+ ]
+}

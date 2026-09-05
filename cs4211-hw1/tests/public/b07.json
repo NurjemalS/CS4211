@@ -1,0 +1,64 @@
+{
+ "description": "[S-While] unfolds without consulting the guard",
+ "expected": {
+  "next": {
+   "c": {
+    "b": {
+     "k": "bool",
+     "v": true
+    },
+    "f": {
+     "k": "skip"
+    },
+    "k": "if",
+    "t": {
+     "k": "seq",
+     "l": {
+      "k": "skip"
+     },
+     "r": {
+      "b": {
+       "k": "bool",
+       "v": true
+      },
+      "c": {
+       "k": "skip"
+      },
+      "k": "while"
+     }
+    }
+   },
+   "s": {
+    "arrays": {},
+    "vars": {}
+   }
+  },
+  "status": "ok"
+ },
+ "features": [],
+ "graded": true,
+ "group": "step",
+ "id": "b07",
+ "part": "B",
+ "request": {
+  "arith": "int",
+  "mode": "step",
+  "program": {
+   "b": {
+    "k": "bool",
+    "v": true
+   },
+   "c": {
+    "k": "skip"
+   },
+   "k": "while"
+  },
+  "state": {
+   "arrays": {},
+   "vars": {}
+  }
+ },
+ "rules": [
+  "S-While"
+ ]
+}

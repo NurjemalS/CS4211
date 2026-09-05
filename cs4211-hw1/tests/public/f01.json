@@ -1,0 +1,58 @@
+{
+ "description": "two branches, two final states",
+ "expected": {
+  "finals_found": [
+   {
+    "arrays": {},
+    "vars": {
+     "x": 1
+    }
+   },
+   {
+    "arrays": {},
+    "vars": {
+     "x": 2
+    }
+   }
+  ],
+  "status": "ok",
+  "stuck_found": false,
+  "truncated": false
+ },
+ "features": [
+  "choice"
+ ],
+ "graded": true,
+ "group": "bonus",
+ "id": "f01",
+ "part": "bonus",
+ "request": {
+  "arith": "int",
+  "budget": 500,
+  "mode": "explore",
+  "program": {
+   "k": "choice",
+   "l": {
+    "e": {
+     "k": "num",
+     "n": 1
+    },
+    "k": "assign",
+    "x": "x"
+   },
+   "r": {
+    "e": {
+     "k": "num",
+     "n": 2
+    },
+    "k": "assign",
+    "x": "x"
+   }
+  },
+  "state": {
+   "arrays": {},
+   "vars": {}
+  }
+ },
+ "rules": []
+}

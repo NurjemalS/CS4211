@@ -1,0 +1,65 @@
+{
+ "description": "budget 1 is enough: the terminal test precedes the budget test",
+ "expected": {
+  "configs": [
+   {
+    "c": {
+     "e": {
+      "k": "num",
+      "n": 1
+     },
+     "k": "assign",
+     "x": "x"
+    },
+    "s": {
+     "arrays": {},
+     "vars": {}
+    }
+   },
+   {
+    "c": {
+     "k": "skip"
+    },
+    "s": {
+     "arrays": {},
+     "vars": {
+      "x": 1
+     }
+    }
+   }
+  ],
+  "final": {
+   "arrays": {},
+   "vars": {
+    "x": 1
+   }
+  },
+  "status": "terminated",
+  "steps": 1
+ },
+ "features": [],
+ "graded": true,
+ "group": "run",
+ "id": "c02",
+ "part": "B",
+ "request": {
+  "arith": "int",
+  "budget": 1,
+  "mode": "run",
+  "program": {
+   "e": {
+    "k": "num",
+    "n": 1
+   },
+   "k": "assign",
+   "x": "x"
+  },
+  "state": {
+   "arrays": {},
+   "vars": {}
+  }
+ },
+ "rules": [
+  "S-Asgn"
+ ]
+}

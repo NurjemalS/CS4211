@@ -1,0 +1,23 @@
+{
+ "description": "skip is final",
+ "expected": {
+  "status": "final"
+ },
+ "features": [],
+ "graded": true,
+ "group": "step",
+ "id": "b01",
+ "part": "B",
+ "request": {
+  "arith": "int",
+  "mode": "step",
+  "program": {
+   "k": "skip"
+  },
+  "state": {
+   "arrays": {},
+   "vars": {}
+  }
+ },
+ "rules": []
+}

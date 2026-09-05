@@ -1,0 +1,98 @@
+{
+ "description": "[A-Op] actually performs a multiplication",
+ "expected": {
+  "configs": [
+   {
+    "c": {
+     "e": {
+      "k": "aop",
+      "l": {
+       "k": "num",
+       "n": 2
+      },
+      "op": "*",
+      "r": {
+       "k": "num",
+       "n": 3
+      }
+     },
+     "k": "assign",
+     "x": "x"
+    },
+    "s": {
+     "arrays": {},
+     "vars": {}
+    }
+   },
+   {
+    "c": {
+     "e": {
+      "k": "num",
+      "n": 6
+     },
+     "k": "assign",
+     "x": "x"
+    },
+    "s": {
+     "arrays": {},
+     "vars": {}
+    }
+   },
+   {
+    "c": {
+     "k": "skip"
+    },
+    "s": {
+     "arrays": {},
+     "vars": {
+      "x": 6
+     }
+    }
+   }
+  ],
+  "final": {
+   "arrays": {},
+   "vars": {
+    "x": 6
+   }
+  },
+  "status": "terminated",
+  "steps": 2
+ },
+ "features": [],
+ "graded": true,
+ "group": "run",
+ "id": "b11",
+ "part": "B",
+ "request": {
+  "arith": "int",
+  "budget": 50,
+  "mode": "run",
+  "program": {
+   "e": {
+    "k": "aop",
+    "l": {
+     "k": "num",
+     "n": 2
+    },
+    "op": "*",
+    "r": {
+     "k": "num",
+     "n": 3
+    }
+   },
+   "k": "assign",
+   "x": "x"
+  },
+  "state": {
+   "arrays": {},
+   "vars": {}
+  }
+ },
+ "rules": [
+  "A-Op",
+  "A-Op:*",
+  "S-Asgn",
+  "S-Asgn-Step"
+ ]
+}

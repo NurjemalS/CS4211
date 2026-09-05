@@ -1,0 +1,210 @@
+{
+ "description": "[A-Arr-Idx] then [A-Arr]: a successful small-step array read",
+ "expected": {
+  "configs": [
+   {
+    "c": {
+     "e": {
+      "a": "a",
+      "i": {
+       "k": "aop",
+       "l": {
+        "k": "var",
+        "x": "i"
+       },
+       "op": "+",
+       "r": {
+        "k": "num",
+        "n": 1
+       }
+      },
+      "k": "aget"
+     },
+     "k": "assign",
+     "x": "x"
+    },
+    "s": {
+     "arrays": {
+      "a": [
+       10,
+       20,
+       30
+      ]
+     },
+     "vars": {
+      "i": 1
+     }
+    }
+   },
+   {
+    "c": {
+     "e": {
+      "a": "a",
+      "i": {
+       "k": "aop",
+       "l": {
+        "k": "num",
+        "n": 1
+       },
+       "op": "+",
+       "r": {
+        "k": "num",
+        "n": 1
+       }
+      },
+      "k": "aget"
+     },
+     "k": "assign",
+     "x": "x"
+    },
+    "s": {
+     "arrays": {
+      "a": [
+       10,
+       20,
+       30
+      ]
+     },
+     "vars": {
+      "i": 1
+     }
+    }
+   },
+   {
+    "c": {
+     "e": {
+      "a": "a",
+      "i": {
+       "k": "num",
+       "n": 2
+      },
+      "k": "aget"
+     },
+     "k": "assign",
+     "x": "x"
+    },
+    "s": {
+     "arrays": {
+      "a": [
+       10,
+       20,
+       30
+      ]
+     },
+     "vars": {
+      "i": 1
+     }
+    }
+   },
+   {
+    "c": {
+     "e": {
+      "k": "num",
+      "n": 30
+     },
+     "k": "assign",
+     "x": "x"
+    },
+    "s": {
+     "arrays": {
+      "a": [
+       10,
+       20,
+       30
+      ]
+     },
+     "vars": {
+      "i": 1
+     }
+    }
+   },
+   {
+    "c": {
+     "k": "skip"
+    },
+    "s": {
+     "arrays": {
+      "a": [
+       10,
+       20,
+       30
+      ]
+     },
+     "vars": {
+      "i": 1,
+      "x": 30
+     }
+    }
+   }
+  ],
+  "final": {
+   "arrays": {
+    "a": [
+     10,
+     20,
+     30
+    ]
+   },
+   "vars": {
+    "i": 1,
+    "x": 30
+   }
+  },
+  "status": "terminated",
+  "steps": 4
+ },
+ "features": [
+  "arrays"
+ ],
+ "graded": true,
+ "group": "run",
+ "id": "e15",
+ "part": "D",
+ "request": {
+  "arith": "int",
+  "budget": 50,
+  "mode": "run",
+  "program": {
+   "e": {
+    "a": "a",
+    "i": {
+     "k": "aop",
+     "l": {
+      "k": "var",
+      "x": "i"
+     },
+     "op": "+",
+     "r": {
+      "k": "num",
+      "n": 1
+     }
+    },
+    "k": "aget"
+   },
+   "k": "assign",
+   "x": "x"
+  },
+  "state": {
+   "arrays": {
+    "a": [
+     10,
+     20,
+     30
+    ]
+   },
+   "vars": {
+    "i": 1
+   }
+  }
+ },
+ "rules": [
+  "A-Arr",
+  "A-Arr-Idx",
+  "A-Op",
+  "A-Op-L",
+  "A-Op:+",
+  "A-Var",
+  "S-Asgn",
+  "S-Asgn-Step"
+ ]
+}

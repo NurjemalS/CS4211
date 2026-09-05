@@ -1,0 +1,952 @@
+{
+ "description": "subtractive Euclid",
+ "expected": {
+  "derivation": {
+   "in": {
+    "arrays": {},
+    "vars": {
+     "x": 48,
+     "y": 18
+    }
+   },
+   "out": {
+    "arrays": {},
+    "vars": {
+     "x": 6,
+     "y": 6
+    }
+   },
+   "prem": [
+    {
+     "in": {
+      "arrays": {},
+      "vars": {
+       "x": 48,
+       "y": 18
+      }
+     },
+     "prem": [
+      {
+       "in": {
+        "arrays": {},
+        "vars": {
+         "x": 48,
+         "y": 18
+        }
+       },
+       "prem": [
+        {
+         "in": {
+          "arrays": {},
+          "vars": {
+           "x": 48,
+           "y": 18
+          }
+         },
+         "prem": [],
+         "rule": "Var",
+         "subj": "x",
+         "val": 48
+        },
+        {
+         "in": {
+          "arrays": {},
+          "vars": {
+           "x": 48,
+           "y": 18
+          }
+         },
+         "prem": [],
+         "rule": "Var",
+         "subj": "y",
+         "val": 18
+        }
+       ],
+       "rule": "Eq",
+       "subj": "x = y",
+       "val": false
+      }
+     ],
+     "rule": "Not",
+     "subj": "not (x = y)",
+     "val": true
+    },
+    {
+     "in": {
+      "arrays": {},
+      "vars": {
+       "x": 48,
+       "y": 18
+      }
+     },
+     "out": {
+      "arrays": {},
+      "vars": {
+       "x": 30,
+       "y": 18
+      }
+     },
+     "prem": [
+      {
+       "in": {
+        "arrays": {},
+        "vars": {
+         "x": 48,
+         "y": 18
+        }
+       },
+       "prem": [
+        {
+         "in": {
+          "arrays": {},
+          "vars": {
+           "x": 48,
+           "y": 18
+          }
+         },
+         "prem": [],
+         "rule": "Var",
+         "subj": "y",
+         "val": 18
+        },
+        {
+         "in": {
+          "arrays": {},
+          "vars": {
+           "x": 48,
+           "y": 18
+          }
+         },
+         "prem": [],
+         "rule": "Var",
+         "subj": "x",
+         "val": 48
+        }
+       ],
+       "rule": "Leq",
+       "subj": "y <= x",
+       "val": true
+      },
+      {
+       "in": {
+        "arrays": {},
+        "vars": {
+         "x": 48,
+         "y": 18
+        }
+       },
+       "out": {
+        "arrays": {},
+        "vars": {
+         "x": 30,
+         "y": 18
+        }
+       },
+       "prem": [
+        {
+         "in": {
+          "arrays": {},
+          "vars": {
+           "x": 48,
+           "y": 18
+          }
+         },
+         "prem": [
+          {
+           "in": {
+            "arrays": {},
+            "vars": {
+             "x": 48,
+             "y": 18
+            }
+           },
+           "prem": [],
+           "rule": "Var",
+           "subj": "x",
+           "val": 48
+          },
+          {
+           "in": {
+            "arrays": {},
+            "vars": {
+             "x": 48,
+             "y": 18
+            }
+           },
+           "prem": [],
+           "rule": "Var",
+           "subj": "y",
+           "val": 18
+          }
+         ],
+         "rule": "Sub",
+         "subj": "x - y",
+         "val": 30
+        }
+       ],
+       "rule": "Asgn",
+       "subj": "x := x - y"
+      }
+     ],
+     "rule": "If-True"
+    },
+    {
+     "in": {
+      "arrays": {},
+      "vars": {
+       "x": 30,
+       "y": 18
+      }
+     },
+     "out": {
+      "arrays": {},
+      "vars": {
+       "x": 6,
+       "y": 6
+      }
+     },
+     "prem": [
+      {
+       "in": {
+        "arrays": {},
+        "vars": {
+         "x": 30,
+         "y": 18
+        }
+       },
+       "prem": [
+        {
+         "in": {
+          "arrays": {},
+          "vars": {
+           "x": 30,
+           "y": 18
+          }
+         },
+         "prem": [
+          {
+           "in": {
+            "arrays": {},
+            "vars": {
+             "x": 30,
+             "y": 18
+            }
+           },
+           "prem": [],
+           "rule": "Var",
+           "subj": "x",
+           "val": 30
+          },
+          {
+           "in": {
+            "arrays": {},
+            "vars": {
+             "x": 30,
+             "y": 18
+            }
+           },
+           "prem": [],
+           "rule": "Var",
+           "subj": "y",
+           "val": 18
+          }
+         ],
+         "rule": "Eq",
+         "subj": "x = y",
+         "val": false
+        }
+       ],
+       "rule": "Not",
+       "subj": "not (x = y)",
+       "val": true
+      },
+      {
+       "in": {
+        "arrays": {},
+        "vars": {
+         "x": 30,
+         "y": 18
+        }
+       },
+       "out": {
+        "arrays": {},
+        "vars": {
+         "x": 12,
+         "y": 18
+        }
+       },
+       "prem": [
+        {
+         "in": {
+          "arrays": {},
+          "vars": {
+           "x": 30,
+           "y": 18
+          }
+         },
+         "prem": [
+          {
+           "in": {
+            "arrays": {},
+            "vars": {
+             "x": 30,
+             "y": 18
+            }
+           },
+           "prem": [],
+           "rule": "Var",
+           "subj": "y",
+           "val": 18
+          },
+          {
+           "in": {
+            "arrays": {},
+            "vars": {
+             "x": 30,
+             "y": 18
+            }
+           },
+           "prem": [],
+           "rule": "Var",
+           "subj": "x",
+           "val": 30
+          }
+         ],
+         "rule": "Leq",
+         "subj": "y <= x",
+         "val": true
+        },
+        {
+         "in": {
+          "arrays": {},
+          "vars": {
+           "x": 30,
+           "y": 18
+          }
+         },
+         "out": {
+          "arrays": {},
+          "vars": {
+           "x": 12,
+           "y": 18
+          }
+         },
+         "prem": [
+          {
+           "in": {
+            "arrays": {},
+            "vars": {
+             "x": 30,
+             "y": 18
+            }
+           },
+           "prem": [
+            {
+             "in": {
+              "arrays": {},
+              "vars": {
+               "x": 30,
+               "y": 18
+              }
+             },
+             "prem": [],
+             "rule": "Var",
+             "subj": "x",
+             "val": 30
+            },
+            {
+             "in": {
+              "arrays": {},
+              "vars": {
+               "x": 30,
+               "y": 18
+              }
+             },
+             "prem": [],
+             "rule": "Var",
+             "subj": "y",
+             "val": 18
+            }
+           ],
+           "rule": "Sub",
+           "subj": "x - y",
+           "val": 12
+          }
+         ],
+         "rule": "Asgn",
+         "subj": "x := x - y"
+        }
+       ],
+       "rule": "If-True"
+      },
+      {
+       "in": {
+        "arrays": {},
+        "vars": {
+         "x": 12,
+         "y": 18
+        }
+       },
+       "out": {
+        "arrays": {},
+        "vars": {
+         "x": 6,
+         "y": 6
+        }
+       },
+       "prem": [
+        {
+         "in": {
+          "arrays": {},
+          "vars": {
+           "x": 12,
+           "y": 18
+          }
+         },
+         "prem": [
+          {
+           "in": {
+            "arrays": {},
+            "vars": {
+             "x": 12,
+             "y": 18
+            }
+           },
+           "prem": [
+            {
+             "in": {
+              "arrays": {},
+              "vars": {
+               "x": 12,
+               "y": 18
+              }
+             },
+             "prem": [],
+             "rule": "Var",
+             "subj": "x",
+             "val": 12
+            },
+            {
+             "in": {
+              "arrays": {},
+              "vars": {
+               "x": 12,
+               "y": 18
+              }
+             },
+             "prem": [],
+             "rule": "Var",
+             "subj": "y",
+             "val": 18
+            }
+           ],
+           "rule": "Eq",
+           "subj": "x = y",
+           "val": false
+          }
+         ],
+         "rule": "Not",
+         "subj": "not (x = y)",
+         "val": true
+        },
+        {
+         "in": {
+          "arrays": {},
+          "vars": {
+           "x": 12,
+           "y": 18
+          }
+         },
+         "out": {
+          "arrays": {},
+          "vars": {
+           "x": 12,
+           "y": 6
+          }
+         },
+         "prem": [
+          {
+           "in": {
+            "arrays": {},
+            "vars": {
+             "x": 12,
+             "y": 18
+            }
+           },
+           "prem": [
+            {
+             "in": {
+              "arrays": {},
+              "vars": {
+               "x": 12,
+               "y": 18
+              }
+             },
+             "prem": [],
+             "rule": "Var",
+             "subj": "y",
+             "val": 18
+            },
+            {
+             "in": {
+              "arrays": {},
+              "vars": {
+               "x": 12,
+               "y": 18
+              }
+             },
+             "prem": [],
+             "rule": "Var",
+             "subj": "x",
+             "val": 12
+            }
+           ],
+           "rule": "Leq",
+           "subj": "y <= x",
+           "val": false
+          },
+          {
+           "in": {
+            "arrays": {},
+            "vars": {
+             "x": 12,
+             "y": 18
+            }
+           },
+           "out": {
+            "arrays": {},
+            "vars": {
+             "x": 12,
+             "y": 6
+            }
+           },
+           "prem": [
+            {
+             "in": {
+              "arrays": {},
+              "vars": {
+               "x": 12,
+               "y": 18
+              }
+             },
+             "prem": [
+              {
+               "in": {
+                "arrays": {},
+                "vars": {
+                 "x": 12,
+                 "y": 18
+                }
+               },
+               "prem": [],
+               "rule": "Var",
+               "subj": "y",
+               "val": 18
+              },
+              {
+               "in": {
+                "arrays": {},
+                "vars": {
+                 "x": 12,
+                 "y": 18
+                }
+               },
+               "prem": [],
+               "rule": "Var",
+               "subj": "x",
+               "val": 12
+              }
+             ],
+             "rule": "Sub",
+             "subj": "y - x",
+             "val": 6
+            }
+           ],
+           "rule": "Asgn",
+           "subj": "y := y - x"
+          }
+         ],
+         "rule": "If-False"
+        },
+        {
+         "in": {
+          "arrays": {},
+          "vars": {
+           "x": 12,
+           "y": 6
+          }
+         },
+         "out": {
+          "arrays": {},
+          "vars": {
+           "x": 6,
+           "y": 6
+          }
+         },
+         "prem": [
+          {
+           "in": {
+            "arrays": {},
+            "vars": {
+             "x": 12,
+             "y": 6
+            }
+           },
+           "prem": [
+            {
+             "in": {
+              "arrays": {},
+              "vars": {
+               "x": 12,
+               "y": 6
+              }
+             },
+             "prem": [
+              {
+               "in": {
+                "arrays": {},
+                "vars": {
+                 "x": 12,
+                 "y": 6
+                }
+               },
+               "prem": [],
+               "rule": "Var",
+               "subj": "x",
+               "val": 12
+              },
+              {
+               "in": {
+                "arrays": {},
+                "vars": {
+                 "x": 12,
+                 "y": 6
+                }
+               },
+               "prem": [],
+               "rule": "Var",
+               "subj": "y",
+               "val": 6
+              }
+             ],
+             "rule": "Eq",
+             "subj": "x = y",
+             "val": false
+            }
+           ],
+           "rule": "Not",
+           "subj": "not (x = y)",
+           "val": true
+          },
+          {
+           "in": {
+            "arrays": {},
+            "vars": {
+             "x": 12,
+             "y": 6
+            }
+           },
+           "out": {
+            "arrays": {},
+            "vars": {
+             "x": 6,
+             "y": 6
+            }
+           },
+           "prem": [
+            {
+             "in": {
+              "arrays": {},
+              "vars": {
+               "x": 12,
+               "y": 6
+              }
+             },
+             "prem": [
+              {
+               "in": {
+                "arrays": {},
+                "vars": {
+                 "x": 12,
+                 "y": 6
+                }
+               },
+               "prem": [],
+               "rule": "Var",
+               "subj": "y",
+               "val": 6
+              },
+              {
+               "in": {
+                "arrays": {},
+                "vars": {
+                 "x": 12,
+                 "y": 6
+                }
+               },
+               "prem": [],
+               "rule": "Var",
+               "subj": "x",
+               "val": 12
+              }
+             ],
+             "rule": "Leq",
+             "subj": "y <= x",
+             "val": true
+            },
+            {
+             "in": {
+              "arrays": {},
+              "vars": {
+               "x": 12,
+               "y": 6
+              }
+             },
+             "out": {
+              "arrays": {},
+              "vars": {
+               "x": 6,
+               "y": 6
+              }
+             },
+             "prem": [
+              {
+               "in": {
+                "arrays": {},
+                "vars": {
+                 "x": 12,
+                 "y": 6
+                }
+               },
+               "prem": [
+                {
+                 "in": {
+                  "arrays": {},
+                  "vars": {
+                   "x": 12,
+                   "y": 6
+                  }
+                 },
+                 "prem": [],
+                 "rule": "Var",
+                 "subj": "x",
+                 "val": 12
+                },
+                {
+                 "in": {
+                  "arrays": {},
+                  "vars": {
+                   "x": 12,
+                   "y": 6
+                  }
+                 },
+                 "prem": [],
+                 "rule": "Var",
+                 "subj": "y",
+                 "val": 6
+                }
+               ],
+               "rule": "Sub",
+               "subj": "x - y",
+               "val": 6
+              }
+             ],
+             "rule": "Asgn",
+             "subj": "x := x - y"
+            }
+           ],
+           "rule": "If-True"
+          },
+          {
+           "in": {
+            "arrays": {},
+            "vars": {
+             "x": 6,
+             "y": 6
+            }
+           },
+           "out": {
+            "arrays": {},
+            "vars": {
+             "x": 6,
+             "y": 6
+            }
+           },
+           "prem": [
+            {
+             "in": {
+              "arrays": {},
+              "vars": {
+               "x": 6,
+               "y": 6
+              }
+             },
+             "prem": [
+              {
+               "in": {
+                "arrays": {},
+                "vars": {
+                 "x": 6,
+                 "y": 6
+                }
+               },
+               "prem": [
+                {
+                 "in": {
+                  "arrays": {},
+                  "vars": {
+                   "x": 6,
+                   "y": 6
+                  }
+                 },
+                 "prem": [],
+                 "rule": "Var",
+                 "subj": "x",
+                 "val": 6
+                },
+                {
+                 "in": {
+                  "arrays": {},
+                  "vars": {
+                   "x": 6,
+                   "y": 6
+                  }
+                 },
+                 "prem": [],
+                 "rule": "Var",
+                 "subj": "y",
+                 "val": 6
+                }
+               ],
+               "rule": "Eq",
+               "subj": "x = y",
+               "val": true
+              }
+             ],
+             "rule": "Not",
+             "subj": "not (x = y)",
+             "val": false
+            }
+           ],
+           "rule": "While-False",
+           "subj": "while not (x = y) do if y <= x then x := x - y else y := y - x"
+          }
+         ],
+         "rule": "While-True",
+         "subj": "while not (x = y) do if y <= x then x := x - y else y := y - x"
+        }
+       ],
+       "rule": "While-True",
+       "subj": "while not (x = y) do if y <= x then x := x - y else y := y - x"
+      }
+     ],
+     "rule": "While-True",
+     "subj": "while not (x = y) do if y <= x then x := x - y else y := y - x"
+    }
+   ],
+   "rule": "While-True",
+   "subj": "while not (x = y) do if y <= x then x := x - y else y := y - x"
+  },
+  "final": {
+   "arrays": {},
+   "vars": {
+    "x": 6,
+    "y": 6
+   }
+  },
+  "status": "ok"
+ },
+ "features": [],
+ "graded": true,
+ "group": "bigstep-com",
+ "id": "a14",
+ "part": "A",
+ "request": {
+  "arith": "int",
+  "mode": "bigstep",
+  "program": {
+   "b": {
+    "e": {
+     "k": "cmp",
+     "l": {
+      "k": "var",
+      "x": "x"
+     },
+     "op": "=",
+     "r": {
+      "k": "var",
+      "x": "y"
+     }
+    },
+    "k": "not"
+   },
+   "c": {
+    "b": {
+     "k": "cmp",
+     "l": {
+      "k": "var",
+      "x": "y"
+     },
+     "op": "<=",
+     "r": {
+      "k": "var",
+      "x": "x"
+     }
+    },
+    "f": {
+     "e": {
+      "k": "aop",
+      "l": {
+       "k": "var",
+       "x": "y"
+      },
+      "op": "-",
+      "r": {
+       "k": "var",
+       "x": "x"
+      }
+     },
+     "k": "assign",
+     "x": "y"
+    },
+    "k": "if",
+    "t": {
+     "e": {
+      "k": "aop",
+      "l": {
+       "k": "var",
+       "x": "x"
+      },
+      "op": "-",
+      "r": {
+       "k": "var",
+       "x": "y"
+      }
+     },
+     "k": "assign",
+     "x": "x"
+    }
+   },
+   "k": "while"
+  },
+  "state": {
+   "arrays": {},
+   "vars": {
+    "x": 48,
+    "y": 18
+   }
+  }
+ },
+ "rules": [
+  "Asgn",
+  "Eq",
+  "If-False",
+  "If-True",
+  "Leq",
+  "Not",
+  "Sub",
+  "Var",
+  "While-False",
+  "While-True"
+ ]
+}

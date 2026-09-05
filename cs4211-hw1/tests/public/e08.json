@@ -1,0 +1,139 @@
+{
+ "description": "an in-bounds write evaluates the index, then the value",
+ "expected": {
+  "configs": [
+   {
+    "c": {
+     "a": "a",
+     "e": {
+      "k": "aop",
+      "l": {
+       "k": "num",
+       "n": 6
+      },
+      "op": "/",
+      "r": {
+       "k": "num",
+       "n": 2
+      }
+     },
+     "i": {
+      "k": "num",
+      "n": 1
+     },
+     "k": "aset"
+    },
+    "s": {
+     "arrays": {
+      "a": [
+       1,
+       2,
+       3
+      ]
+     },
+     "vars": {}
+    }
+   },
+   {
+    "c": {
+     "a": "a",
+     "e": {
+      "k": "num",
+      "n": 3
+     },
+     "i": {
+      "k": "num",
+      "n": 1
+     },
+     "k": "aset"
+    },
+    "s": {
+     "arrays": {
+      "a": [
+       1,
+       2,
+       3
+      ]
+     },
+     "vars": {}
+    }
+   },
+   {
+    "c": {
+     "k": "skip"
+    },
+    "s": {
+     "arrays": {
+      "a": [
+       1,
+       3,
+       3
+      ]
+     },
+     "vars": {}
+    }
+   }
+  ],
+  "final": {
+   "arrays": {
+    "a": [
+     1,
+     3,
+     3
+    ]
+   },
+   "vars": {}
+  },
+  "status": "terminated",
+  "steps": 2
+ },
+ "features": [
+  "arrays",
+  "division"
+ ],
+ "graded": true,
+ "group": "run",
+ "id": "e08",
+ "part": "D",
+ "request": {
+  "arith": "int",
+  "budget": 50,
+  "mode": "run",
+  "program": {
+   "a": "a",
+   "e": {
+    "k": "aop",
+    "l": {
+     "k": "num",
+     "n": 6
+    },
+    "op": "/",
+    "r": {
+     "k": "num",
+     "n": 2
+    }
+   },
+   "i": {
+    "k": "num",
+    "n": 1
+   },
+   "k": "aset"
+  },
+  "state": {
+   "arrays": {
+    "a": [
+     1,
+     2,
+     3
+    ]
+   },
+   "vars": {}
+  }
+ },
+ "rules": [
+  "A-Op",
+  "A-Op:/",
+  "S-Arr",
+  "S-Arr-Step"
+ ]
+}

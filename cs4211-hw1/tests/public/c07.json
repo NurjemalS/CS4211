@@ -1,0 +1,334 @@
+{
+ "description": "a budget verdict says only that execution continued",
+ "expected": {
+  "configs": [
+   {
+    "c": {
+     "b": {
+      "k": "bool",
+      "v": true
+     },
+     "c": {
+      "k": "skip"
+     },
+     "k": "while"
+    },
+    "s": {
+     "arrays": {},
+     "vars": {}
+    }
+   },
+   {
+    "c": {
+     "b": {
+      "k": "bool",
+      "v": true
+     },
+     "f": {
+      "k": "skip"
+     },
+     "k": "if",
+     "t": {
+      "k": "seq",
+      "l": {
+       "k": "skip"
+      },
+      "r": {
+       "b": {
+        "k": "bool",
+        "v": true
+       },
+       "c": {
+        "k": "skip"
+       },
+       "k": "while"
+      }
+     }
+    },
+    "s": {
+     "arrays": {},
+     "vars": {}
+    }
+   },
+   {
+    "c": {
+     "k": "seq",
+     "l": {
+      "k": "skip"
+     },
+     "r": {
+      "b": {
+       "k": "bool",
+       "v": true
+      },
+      "c": {
+       "k": "skip"
+      },
+      "k": "while"
+     }
+    },
+    "s": {
+     "arrays": {},
+     "vars": {}
+    }
+   },
+   {
+    "c": {
+     "b": {
+      "k": "bool",
+      "v": true
+     },
+     "c": {
+      "k": "skip"
+     },
+     "k": "while"
+    },
+    "s": {
+     "arrays": {},
+     "vars": {}
+    }
+   },
+   {
+    "c": {
+     "b": {
+      "k": "bool",
+      "v": true
+     },
+     "f": {
+      "k": "skip"
+     },
+     "k": "if",
+     "t": {
+      "k": "seq",
+      "l": {
+       "k": "skip"
+      },
+      "r": {
+       "b": {
+        "k": "bool",
+        "v": true
+       },
+       "c": {
+        "k": "skip"
+       },
+       "k": "while"
+      }
+     }
+    },
+    "s": {
+     "arrays": {},
+     "vars": {}
+    }
+   },
+   {
+    "c": {
+     "k": "seq",
+     "l": {
+      "k": "skip"
+     },
+     "r": {
+      "b": {
+       "k": "bool",
+       "v": true
+      },
+      "c": {
+       "k": "skip"
+      },
+      "k": "while"
+     }
+    },
+    "s": {
+     "arrays": {},
+     "vars": {}
+    }
+   },
+   {
+    "c": {
+     "b": {
+      "k": "bool",
+      "v": true
+     },
+     "c": {
+      "k": "skip"
+     },
+     "k": "while"
+    },
+    "s": {
+     "arrays": {},
+     "vars": {}
+    }
+   },
+   {
+    "c": {
+     "b": {
+      "k": "bool",
+      "v": true
+     },
+     "f": {
+      "k": "skip"
+     },
+     "k": "if",
+     "t": {
+      "k": "seq",
+      "l": {
+       "k": "skip"
+      },
+      "r": {
+       "b": {
+        "k": "bool",
+        "v": true
+       },
+       "c": {
+        "k": "skip"
+       },
+       "k": "while"
+      }
+     }
+    },
+    "s": {
+     "arrays": {},
+     "vars": {}
+    }
+   },
+   {
+    "c": {
+     "k": "seq",
+     "l": {
+      "k": "skip"
+     },
+     "r": {
+      "b": {
+       "k": "bool",
+       "v": true
+      },
+      "c": {
+       "k": "skip"
+      },
+      "k": "while"
+     }
+    },
+    "s": {
+     "arrays": {},
+     "vars": {}
+    }
+   },
+   {
+    "c": {
+     "b": {
+      "k": "bool",
+      "v": true
+     },
+     "c": {
+      "k": "skip"
+     },
+     "k": "while"
+    },
+    "s": {
+     "arrays": {},
+     "vars": {}
+    }
+   },
+   {
+    "c": {
+     "b": {
+      "k": "bool",
+      "v": true
+     },
+     "f": {
+      "k": "skip"
+     },
+     "k": "if",
+     "t": {
+      "k": "seq",
+      "l": {
+       "k": "skip"
+      },
+      "r": {
+       "b": {
+        "k": "bool",
+        "v": true
+       },
+       "c": {
+        "k": "skip"
+       },
+       "k": "while"
+      }
+     }
+    },
+    "s": {
+     "arrays": {},
+     "vars": {}
+    }
+   },
+   {
+    "c": {
+     "k": "seq",
+     "l": {
+      "k": "skip"
+     },
+     "r": {
+      "b": {
+       "k": "bool",
+       "v": true
+      },
+      "c": {
+       "k": "skip"
+      },
+      "k": "while"
+     }
+    },
+    "s": {
+     "arrays": {},
+     "vars": {}
+    }
+   },
+   {
+    "c": {
+     "b": {
+      "k": "bool",
+      "v": true
+     },
+     "c": {
+      "k": "skip"
+     },
+     "k": "while"
+    },
+    "s": {
+     "arrays": {},
+     "vars": {}
+    }
+   }
+  ],
+  "status": "budget",
+  "steps": 12
+ },
+ "features": [],
+ "graded": true,
+ "group": "run",
+ "id": "c07",
+ "part": "B",
+ "request": {
+  "arith": "int",
+  "budget": 12,
+  "mode": "run",
+  "program": {
+   "b": {
+    "k": "bool",
+    "v": true
+   },
+   "c": {
+    "k": "skip"
+   },
+   "k": "while"
+  },
+  "state": {
+   "arrays": {},
+   "vars": {}
+  }
+ },
+ "rules": [
+  "S-If-True",
+  "S-Seq-Done",
+  "S-While"
+ ]
+}
