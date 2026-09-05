@@ -1,46 +1,47 @@
 # AI use declaration
 
-Name:
+Name: Nurjemal Saryyeva
 Student number:
-
-Submit this file whether or not you used any tools. If you used none, write
-"None" under Tools and delete the rest.
 
 ---
 
 ## Tools
 
-Name the assistants you used, and roughly where.
-
-<!-- Example:
-- Claude Code — Part B, the small-step congruence rules
-- GitHub Copilot — autocomplete throughout
--->
+- Claude Code — the entire Python `submission/` implementation: `big_step.py`
+  (Part A), `small_step.py` (Part B), and `analysis.py` (Parts C and the
+  bonus).
 
 ## Substantive assistance
 
-Which parts received real help, as opposed to autocomplete? One or two lines
-each. "Generated the first version of X", "explained why Y was wrong",
-"suggested restructuring Z" are all fine answers.
-
-<!-- Example:
-- Part A: generated the first version of `big_a`, which I then rewrote because
-  it did not return derivations.
-- Part C: explained why comparing configurations with `==` on dictionaries was
-  missing cycles.
--->
+- Part A (`big_step.py`): generated `big_a`, `big_b`, and `big_c` directly
+  from the definitive big-step rules in the handout, including the
+  three-premise `While-True` derivation and the evaluate-index-then-check-
+  bound-then-evaluate-value order for `Arr-Write`.
+- Part B (`small_step.py`): generated `step_a`, `step_b`, `step_c`, and `run`
+  from the small-step congruence rules, keeping the left-to-right operand
+  order (`A-Op-L`/`A-Op-R`, `B-Cmp-L`/`B-Cmp-R`, `B-Con-L`/`B-Con-R`) and the
+  strict, non-short-circuiting treatment of `and`/`or`.
+- Part C (`analysis.py`): generated `classify`, checking finality, then a
+  repeated configuration, then the budget, in that order, using
+  `Configuration.key()` for cycle detection.
+- Bonus (`analysis.py`): generated `step_all` and `explore`. `step_all`
+  required one case beyond the two `[S-Choice-*]` rules: when `choice`
+  appears as the first command of a `seq` (test `f04`), the congruence rule
+  `[S-Seq]` must fan out over every successor of the first command, not just
+  one, so `step_all` recurses into `SequenceCommand.first` instead of
+  delegating straight to the deterministic `step_c`.
 
 ## One suggestion you accepted, and one you rejected
 
-Name a suggestion you took and why it was right, and one you turned down and
-why it was wrong. If you rejected nothing, say so.
-
-<!-- Example:
-- Accepted: using the canonical JSON string as the key for cycle detection.
-- Rejected: short-circuiting `and`, which the assistant kept inserting.
-  The definitive rules in the handout are strict, and the step counts would
-  have been wrong.
--->
+- Accepted: sorting `explore`'s final states by the compact, sort-keyed JSON
+  encoding of each state (`json.dumps(encode_state(s), sort_keys=True,
+  separators=(",", ":"))`), exactly as SPEC.md section 5.5 requires, rather
+  than by an ad hoc tuple ordering that would not have matched the graded
+  comparison.
+- Rejected: none. The first draft of `step_all` treated `choice` as only a
+  top-level form and failed test `f04` (`choice` nested inside a `seq`); this
+  was caught immediately by `validate.py` and fixed by recursing through
+  `SequenceCommand`, so it was a bug fix rather than a rejected suggestion.
 
 ---
 
